@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- Slick.js added here due to conflict with responsive menu -->
+	<script  async='async' src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>

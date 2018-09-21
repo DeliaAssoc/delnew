@@ -24,7 +24,8 @@ $med-shadow: 1px 1px 1px rgba(0,0,0,0.35);
 
 $font-color: #34435e;
 $robo: 'Roboto', Helvetica, Arial, sans-serif;
-$fa: 'FontAwesome', sans-serif;
+$fa: 'fontAwesome', sans-serif;
+$fa5: 'Font Awesome\ 5 Free', sans-serif;
 
 
 // ---------------------------------------------------
@@ -32,5 +33,26 @@ $fa: 'FontAwesome', sans-serif;
 // ---------------------------------------------------
 
 
-$transition-fast: all 0.15s ease;
-$transition-medium : all 0.25s ease;
+@mixin transfast() {
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;   
+}
+
+@mixin transmed() {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+@mixin translow() {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
