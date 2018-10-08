@@ -4,9 +4,11 @@
 
 
 $lightest: #FFFFFF;
-$darkest: #000000;
-$accent: #004080;
-$blackish: #231f20;
+$darkest: #231f20;
+$accent: #c41230;
+$ltgray: #eceff1;
+$mdgray: #d7d7d7;
+$dkgray: #898989;
 $hover: #cc0000;
 
 // ---------------------------------------------------
@@ -14,16 +16,26 @@ $hover: #cc0000;
 // ---------------------------------------------------
 
 
-$light-shadow: 1px 1px 7px 1px rgba(0,0,0,0.07);
-$med-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+@mixin lshadow() {
+    -webkit-box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.07);
+    box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.07);   
+}
+
+@mixin mshadow() {
+    -webkit-box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.25);
+}
 
 
 // ---------------------------------------------------
 //    Typography
 // ---------------------------------------------------
 
-$font-color: #34435e;
-$robo: 'Roboto', Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Raleway:400,700,900');
+
+$font-color: #444;
+$body: 'Poppins', sans-serif;
+$spec: 'Raleway', sans-serif;
 $fa: 'fontAwesome', sans-serif;
 $fa5: 'Font Awesome\ 5 Free', sans-serif;
 

@@ -124,7 +124,10 @@ function del_scripts() {
 	wp_enqueue_style( 'del-slick-style', get_template_directory_uri() . '/css/slick.css' );
 
 	// Add font-awesome.css
-	wp_enqueue_style( 'del-fontawesome-style', get_template_directory_uri() . '/css/fontawesome-all.min.css' );
+	wp_enqueue_style( 'del-fontawesome-style5', get_template_directory_uri() . '/css/fontawesome-all.min.css' );
+
+	// Add font-awesome.css
+	wp_enqueue_style( 'dae-fontawesome-style4', get_template_directory_uri() . '/css/font-awesome.min.css' );
 
 	// Add slick-theme.css
 	wp_enqueue_style( 'del-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
@@ -171,3 +174,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Hide admin Bar
+ */
+show_admin_bar(false);
+
+// Add Theme Options Page
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Site Options',
+		'menu_title'	=> 'Site Options',
+		'menu_slug' 	=> 'modules-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-star-filled',
+		'position'		=> 5
+	));
+
+}

@@ -5,15 +5,18 @@
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: $accent;
+	text-decoration: none;
+	@include transmed();
 }
 
 a:visited {
-	color: purple;
+	color: $accent;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: $dkgray;
+	@include transmed();
 }
 
 a:focus {
@@ -21,7 +24,7 @@ a:focus {
 }
 
 a:hover, a:active {
-	outline: 0;
+	@include transmed();
 }
 
 /*--------------------------------------------------------------

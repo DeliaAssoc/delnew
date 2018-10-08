@@ -16,19 +16,25 @@
 // 	        flex: 1;
 // }
 
+*,:after,:before {
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
 .constrain {
 	display: block;
 	padding: 0 10px;
-	max-width: 1024px;
+	max-width: 1200px;
 	min-width: 320px;
 	margin: 0 auto;
 
-	&.md {
+	&.sm {
 		max-width: 960px;
 	}
 
-	&.lg {
-		max-width: 1200px;
+	&.md {
+		max-width: 1024px;
 	}
 }
 
@@ -43,3 +49,109 @@
 	-ms-flex-wrap: nowrap;
 	    flex-wrap: nowrap;
 }
+
+.p30 {
+	padding: 15px 0;
+}
+
+.p45 {
+	padding: 15px 0;
+}
+
+.p60 {
+	padding: 20px 0;
+}
+
+// SOCIAL MEDIA
+.social-media {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+a.social-icon {
+	background-color: $accent;
+	color: $lightest;
+	font-size: 20px;
+	line-height: 45px;
+	width: 45px;
+}
+
+// MODULES
+a.quick-link {
+	background-color: $ltgray;
+	@include mshadow();
+	height: 300px;
+	margin: 0 0 20px 0;
+	position: relative;
+	@include transmed();
+
+	h2 {
+		color: $accent;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 1em;
+		left: 30px;
+		position: absolute;
+		text-transform: uppercase;
+		top: 50%;
+		transform: translateY( -50% );
+		@include transmed();
+		width: 190px;
+
+		&::before {
+			border-top: 10px solid $accent;
+			content: '';
+			display: block;
+			height: 1px;
+			position: absolute;
+			top: -35px;
+			@include transmed();
+			width: 85px;
+		}
+	}
+
+	.quick-link-icon {
+
+		svg {
+			bottom: 25px;
+			fill: $accent;
+			height: 75px;
+			position: absolute;
+			right: 25px;
+			@include transmed();
+			width: 75px;
+		}
+	}
+
+	&:hover {
+		background-color: $accent;
+		@include transmed();
+
+		h2 {
+			color: $lightest;
+			@include transmed();
+
+			&::before {
+				border-top: 10px solid $lightest;
+				@include transmed();
+			}
+		}
+
+		.quick-link-icon {
+			
+			svg {
+				fill: $lightest;
+				@include transmed();
+			}
+		}
+	}
+}
+

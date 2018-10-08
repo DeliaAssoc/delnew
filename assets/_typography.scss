@@ -7,16 +7,31 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
+	color: $font-color;
+	font-family: $body;
 	font-size: 16px;
-	font-size: 1rem;
+	letter-spacing: .25px;
 	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	color: $font-color;
 	line-height: 1.35;
+	margin: 0 0 10px 0;
+	font-family: $spec;
+
+	a {
+		color: $font-color;
+
+		&:visited {
+			color: $font-color;
+		}
+
+		&:hover {
+			color: $dkgray;
+		}
+	}
 }
 
 p {

@@ -1,12 +1,12 @@
 /* Just for funs and it looks cool */
 ::-moz-selection {
-	background: #e21a22;
+	background: $darkest;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background: #e21a22;
+	background: $darkest;
 	color: #fff;
 	text-shadow: none;
 }
@@ -38,7 +38,8 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0;
+	padding: 0;
 }
 
 ul {
