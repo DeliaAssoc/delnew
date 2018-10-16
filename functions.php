@@ -200,4 +200,24 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> 5
 	));
 
+	acf_add_options_page(array(
+		'page_title' 	=> 'Portfolio Page Options',
+		'menu_title'	=> 'Portfolio Page Options',
+		'menu_slug' 	=> 'portfolio-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-format-image',
+		'position'		=> 7
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Team Page Options',
+		'menu_title'	=> 'Team Page Options',
+		'menu_slug' 	=> 'team-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-groups',
+		'position'		=> 6
+	));
+
 }

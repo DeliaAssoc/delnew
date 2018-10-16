@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<!-- .boasts -->
+<!-- BOASTS MODULE -->
 <?php if ( get_field( 'boasts', 'options' ) ) : ?>
 <section class="boasts p45">
     <?php $boastCount = count( get_field( 'boasts', 'options' ) ); ?>
@@ -41,10 +41,10 @@
     </div>
 </section>
 <?php endif; ?>
-<!-- .boasts -->
+<!-- BOASTS MODULE -->
 
 
-<!-- .client-samples -->
+<!-- CLIENT SAMPLES -->
 <section id="client-samples" class="client-samples">
 	<ul class="flexxed">
 	<?php
@@ -74,11 +74,11 @@
 		<a class="more-work" href="/work/">See More Award Winning Work ></a>
 	</div>
 </section>
-<!-- .client-samples -->
+<!-- CLIENT SAMPLES -->
 
 
 
-<!-- .quick-links -->
+<!-- QUICK LINKS MODULE -->
 <?php if ( get_field( 'quick_links', 'options' ) ) : ?>
     <section class="quick-links p45">
         <div class="constrain sm">
@@ -103,6 +103,6 @@
         </div>
     </section>
 <?php endif; ?>
-<!-- .quick-links -->
+<!-- QUICK LINKS MODULE -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
