@@ -85,6 +85,8 @@ a.social-icon {
 }
 
 // MODULES
+
+// Quick Links
 a.quick-link {
 	background-color: $ltgray;
 	@include mshadow();
@@ -155,3 +157,55 @@ a.quick-link {
 	}
 }
 
+// Tabbed Boasts
+.boasts {
+	background-color: $ltgray;
+}
+
+.tab-links {
+
+	a.link {
+		background-color: $dkgray;
+		background-image: url( 'http://localhost/delianew/wp-content/themes/del/img/white_hourglass.png' );
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-size: 50%;
+		margin: 0 0 15px 0;
+		padding: 40px 20px 20px;
+		text-transform: uppercase;
+
+		&.active {
+			background-color: $accent;
+		}
+
+		&:last-of-type {
+			margin: 0;
+		}
+
+		h3 {
+			color: $lightest;
+			font-size: 23px;
+			font-weight: 700;
+			margin: 0;
+			position: relative;
+
+			&::before {
+				border-top: 4px solid $lightest;
+				content: '';
+				display: block;
+				position: absolute;
+				top: -15px;
+				width: 60px;
+			}
+		}
+	}
+}
+
+.tab-content-block {
+	display: none;
+
+	&.active {
+		display: block;
+		padding: 20px 0 0;
+	}
+}

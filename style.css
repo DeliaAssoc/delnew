@@ -532,6 +532,50 @@ a.quick-link:hover .quick-link-icon svg {
   transition: all 0.25s ease-in-out;
 }
 
+.boasts {
+  background-color: #eceff1;
+}
+
+.tab-links a.link {
+  background-color: #898989;
+  background-image: url("http://localhost/delianew/wp-content/themes/del/img/white_hourglass.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  margin: 0 0 15px 0;
+  padding: 40px 20px 20px;
+  text-transform: uppercase;
+}
+.tab-links a.link.active {
+  background-color: #c41230;
+}
+.tab-links a.link:last-of-type {
+  margin: 0;
+}
+.tab-links a.link h3 {
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+}
+.tab-links a.link h3::before {
+  border-top: 4px solid #FFFFFF;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  width: 60px;
+}
+
+.tab-content-block {
+  display: none;
+}
+.tab-content-block.active {
+  display: block;
+  padding: 20px 0 0;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -1019,6 +1063,65 @@ object {
     width: 31.5%;
   }
 
+  .tab-links {
+    margin: 0 0 20px 0;
+  }
+  .tab-links .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .tab-links a.link {
+    margin: 0;
+    padding: 90px 30px 70px;
+    position: relative;
+  }
+  .tab-links a.link.count-3 {
+    width: 31%;
+  }
+  .tab-links a.link.count-4 {
+    width: 24%;
+  }
+  .tab-links a.link.count-5 {
+    width: 19%;
+  }
+  .tab-links a.link::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 25px 0 25px;
+    border-color: #c4122f transparent transparent transparent;
+    bottom: 0;
+    left: 40%;
+    position: absolute;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+  .tab-links a.link.active::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 0 25px;
+    border-color: #c4122f transparent transparent transparent;
+    bottom: -25px;
+    left: 40%;
+    position: absolute;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+
   .top-footer.p30 {
     padding: 20px 0 10px 0;
   }
@@ -1057,6 +1160,10 @@ object {
 @media only screen and (min-width: 960px) {
   a.quick-link {
     width: 30%;
+  }
+
+  .tab-links a.link {
+    padding: 100px 30px 80px;
   }
 
   .top-footer li {

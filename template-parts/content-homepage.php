@@ -11,6 +11,73 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<!-- .boasts -->
+<?php if ( get_field( 'boasts', 'options' ) ) : ?>
+<section class="boasts p45">
+    <?php $boastCount = count( get_field( 'boasts', 'options' ) ); ?>
+    <div class="constrain md">
+        <div class="tab-links">
+            <div class="flexxed">
+                <?php while ( have_rows( 'boasts', 'options' ) ) : the_row(); ?>
+                    <!-- create unique data-ref -->
+                    <?php $ref = str_replace( ' ', '', strtolower( substr( get_sub_field( 'boast_title', 'options' ), 0, 5 ) ) ); ?>
+
+                    <a href="#" data-ref="<?php echo $ref; ?>" class="link count-<?php echo $boastCount; ?>">
+                        <h3><?php the_sub_field( 'boast_title', 'options' ); ?></h3>
+                    </a>
+                <?php endwhile; ?>
+            </div>
+        </div>
+        <div class="tab-content">
+            <?php while ( have_rows( 'boasts', 'options' ) ) : the_row(); ?>
+                <!-- create unique data-ref -->
+                <?php $ref = str_replace( ' ', '', strtolower( substr( get_sub_field( 'boast_title', 'options' ), 0, 5 ) ) ); ?>
+
+                <div id="<?php echo $ref; ?>" class="tab-content-block">
+                    <?php the_sub_field( 'boast_content', 'options' ); ?>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+<!-- .boasts -->
+
+
+<!-- .client-samples -->
+<section id="client-samples" class="client-samples">
+	<ul class="flexxed">
+	<?php
+		$query = new WP_Query( array( 'post_type' => 'client', 'showposts' => 4, 'orderby' => 'rand' ) );
+			
+		while ( $query->have_posts() ) : $query->the_post(); ?>
+
+			<li class="portfolio">
+
+				<!-- post thumbnail -->
+				<a class="dark-mask" href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+				</a>
+			<!-- /post thumbnail -->
+				<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<h2 class="broll-text">
+						<?php the_title(); ?>
+					</h2>
+				</a> -->
+			</li>	
+
+		<?php endwhile;
+		wp_reset_query();
+	?>
+	</ul>
+	<div class="contain">
+		<a class="more-work" href="/work/">See More Award Winning Work ></a>
+	</div>
+</section>
+<!-- .client-samples -->
+
+
+
 <!-- .quick-links -->
 <?php if ( get_field( 'quick_links', 'options' ) ) : ?>
     <section class="quick-links p45">
