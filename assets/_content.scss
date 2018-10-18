@@ -6,7 +6,145 @@
 --------------------------------------------------------------*/
 
 
+// ALL PAGE STYLES
+.page-banner {
+	background-position: center center;
+	background-size: cover;
+	height: 75px;
+}
 
+// TEAM PAGES
+.team-info {
+	margin: 0 0 15px 0;
+}
+
+.team-image {
+	border-bottom: 5px solid $accent;
+	display: inline-block;
+	margin: 0 0 15px 0;
+
+	img {
+		display: block;
+	}
+}
+
+.team-quote {
+	font-weight: 500;
+	font-size: 18px;
+	font-style: italic;
+	margin: 0 0 15px 0;
+}
+
+.team-links {
+
+	a {
+		background-color: $accent;
+		color: $lightest;
+		float: left;
+		height: 45px;
+		margin: 0 10px 0 0;
+		position: relative;
+		text-align: center;
+		@include transmed();
+		width: 45px;
+
+		&:hover {
+			background-color: $darkest;
+			color: $dkgray;
+			@include transmed();
+		}
+
+		i {
+			font-size: 20px;
+			left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY( -50% );
+		}
+	}
+}
+
+.team-bio {
+
+	.page-title {
+		text-align: center;
+	}
+}
+
+.team-title {
+	font-size: 19px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.teammembers {
+
+	&.flexxed {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+
+.team-block {
+	margin: 0 0 15px 0;
+	max-width: 418px;
+	position: relative;
+
+	img {
+		display: block;
+	}
+
+	.tb-overlay {
+		background-color: rgba(0,0,0,0.15);
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		@include transmed();
+		width: 100%;
+		z-index: 5;
+	}
+
+	.team-block-info {
+		background-color: rgba(0,0,0,0.5);
+		bottom: 25px;
+		height: 75px;
+		left: 0;
+		padding: 10px 0;
+		position: absolute;
+		text-align: center;
+		@include transmed();
+		width: 100%;
+		z-index: 10;
+	}
+
+	.team-block-name {
+		color: $lightest;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.team-block-title {
+		color: #f40404;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	&:hover > .tb-overlay {
+		background-color: rgba(0,0,0,0);
+		@include transmed();
+	}
+
+	&:hover > .team-block-info {
+		bottom: 0;
+		@include transmed();
+	}
+}
 
 /*--------------------------------------------------------------
 ## Comments

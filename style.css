@@ -442,6 +442,11 @@ a.social-icon {
   width: 45px;
 }
 
+.page-title {
+  border-bottom: 2px solid #c41230;
+  color: #c41230;
+}
+
 a.quick-link {
   background-color: #eceff1;
   -webkit-box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.25);
@@ -596,7 +601,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   color: #444;
   line-height: 1.35;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   font-family: "Raleway", sans-serif;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -936,6 +941,149 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.page-banner {
+  background-position: center center;
+  background-size: cover;
+  height: 75px;
+}
+
+.team-info {
+  margin: 0 0 15px 0;
+}
+
+.team-image {
+  border-bottom: 5px solid #c41230;
+  display: inline-block;
+  margin: 0 0 15px 0;
+}
+.team-image img {
+  display: block;
+}
+
+.team-quote {
+  font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 0 15px 0;
+}
+
+.team-links a {
+  background-color: #c41230;
+  color: #FFFFFF;
+  float: left;
+  height: 45px;
+  margin: 0 10px 0 0;
+  position: relative;
+  text-align: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 45px;
+}
+.team-links a:hover {
+  background-color: #231f20;
+  color: #898989;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.team-links a i {
+  font-size: 20px;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.team-bio .page-title {
+  text-align: center;
+}
+
+.team-title {
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.teammembers.flexxed {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.team-block {
+  margin: 0 0 15px 0;
+  max-width: 418px;
+  position: relative;
+}
+.team-block img {
+  display: block;
+}
+.team-block .tb-overlay {
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+  z-index: 5;
+}
+.team-block .team-block-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 25px;
+  height: 75px;
+  left: 0;
+  padding: 10px 0;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+  z-index: 10;
+}
+.team-block .team-block-name {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+.team-block .team-block-title {
+  color: #f40404;
+  font-size: 14px;
+  font-weight: 600;
+}
+.team-block:hover > .tb-overlay {
+  background-color: transparent;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.team-block:hover > .team-block-info {
+  bottom: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1007,6 +1155,11 @@ object {
   font-size: 12px;
 }
 
+@media only screen and (min-width: 480px) {
+  .page-banner {
+    height: 100px;
+  }
+}
 @media only screen and (min-width: 568px) {
   .p30 {
     padding: 15px 0;
@@ -1019,8 +1172,28 @@ object {
   .p60 {
     padding: 30px 0;
   }
+
+  .page-banner {
+    height: 125px;
+  }
 }
 @media only screen and (min-width: 640px) {
+  .teammembers.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+
+  .team-block {
+    width: 48.5%;
+  }
+
   .top-footer .menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1122,6 +1295,35 @@ object {
     transition: all 0.15s ease-in-out;
   }
 
+  .page-banner {
+    height: 150px;
+  }
+
+  .team-page.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .team-info {
+    width: 24%;
+  }
+
+  .team-bio {
+    width: 72.5%;
+  }
+  .team-bio .page-title {
+    text-align: left;
+  }
+
+  .team-title {
+    text-align: left;
+  }
+
   .top-footer.p30 {
     padding: 20px 0 10px 0;
   }
@@ -1157,6 +1359,11 @@ object {
     position: relative;
   }
 }
+@media only screen and (min-width: 900px) {
+  .team-block {
+    width: 32%;
+  }
+}
 @media only screen and (min-width: 960px) {
   a.quick-link {
     width: 30%;
@@ -1164,6 +1371,10 @@ object {
 
   .tab-links a.link {
     padding: 100px 30px 80px;
+  }
+
+  .page-banner {
+    height: 175px;
   }
 
   .top-footer li {
@@ -1192,6 +1403,15 @@ object {
 
   .top-footer.p30 {
     padding: 30px 0 20px 0;
+  }
+
+  .team-block {
+    width: 31%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .page-banner {
+    height: 200px;
   }
 }
 /*--------------------------------------------------------------

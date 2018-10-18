@@ -1,3 +1,11 @@
+@media only screen and ( min-width: 480px ) {
+
+    // ALL PAGE STYLES
+    .page-banner {
+        height: 100px;
+    }
+}
+
 @media only screen and ( min-width: 568px ) {
 
     // CLASSES
@@ -12,9 +20,34 @@
     .p60 {
         padding: 30px 0;
     }
+
+    // ALL PAGE STYLES
+    .page-banner {
+        height: 125px;
+    }
 }
 
 @media only screen and ( min-width: 640px ) {
+
+    // TEAM PAGES
+    .teammembers {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+        }
+    }
+
+    .team-block {
+        width: 48.5%;
+    }
 
     // FOOTER
     .top-footer {
@@ -131,6 +164,41 @@
         }
     }
 
+    // ALL PAGE STYLES
+    .page-banner {
+        height: 150px;
+    }
+    
+    // TEAM PAGES
+    .team-page {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .team-info {
+        width: 24%;
+    }
+
+    .team-bio {
+        width: 72.5%;
+
+        .page-title {
+            text-align: left;
+        }
+    }
+
+    .team-title {
+        text-align: left;
+    }
+
     // FOOTER
     .top-footer {
 
@@ -178,6 +246,14 @@
     }
 }
 
+@media only screen and ( min-width: 900px ) {
+
+    // TEAM PAGES
+    .team-block {
+        width: 32%;
+    }
+} 
+
 @media only screen and ( min-width: 960px ) {
 
     // CLASSES
@@ -192,6 +268,11 @@
         a.link {
             padding: 100px 30px 80px;
         }
+    }
+
+    // ALL PAGE STYLES
+    .page-banner {
+        height: 175px;
     }
 
     // FOOTER
@@ -235,4 +316,17 @@
             padding: 30px 0 20px 0;
         }
     }
+
+        // TEAM PAGES
+        .team-block {
+            width: 31%;
+        }
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+        // ALL PAGE STYLES
+        .page-banner {
+            height: 200px;
+        }
 }
