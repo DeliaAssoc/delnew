@@ -57,6 +57,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  overflow-y: scroll;
 }
 
 /* Sections
@@ -387,7 +388,6 @@ template {
   display: block;
   padding: 0 10px;
   max-width: 1200px;
-  min-width: 320px;
   margin: 0 auto;
 }
 .constrain.sm {
@@ -445,6 +445,7 @@ a.social-icon {
 .page-title {
   border-bottom: 2px solid #c41230;
   color: #c41230;
+  margin: 0 0 25px 0;
 }
 
 a.quick-link {
@@ -579,6 +580,10 @@ a.quick-link:hover .quick-link-icon svg {
 .tab-content-block.active {
   display: block;
   padding: 20px 0 0;
+}
+
+a.dark-mask img {
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -947,6 +952,10 @@ a:hover, a:active {
   height: 75px;
 }
 
+.page-intro {
+  margin: 0 0 25px 0;
+}
+
 .team-info {
   margin: 0 0 15px 0;
 }
@@ -1084,6 +1093,83 @@ a:hover, a:active {
   transition: all 0.25s ease-in-out;
 }
 
+.p-hero-image {
+  text-align: center;
+}
+
+.client-samples .portfolio {
+  overflow: hidden;
+}
+.client-samples .portfolio img {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  -ms-transition: -ms-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+}
+.client-samples .portfolio:hover img {
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  -ms-transition: -ms-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+}
+.client-samples .more-work {
+  display: inline-block;
+  background-color: #eceff1;
+  font-size: 17px;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.client-samples .more-work:hover {
+  background-color: #c41230;
+  color: #FFFFFF;
+}
+
+.portfolios-tab-list {
+  text-align: center;
+}
+.portfolios-tab-list .filters {
+  margin: 10px 0 20px;
+  list-style: none;
+}
+.portfolios-tab-list .filters li {
+  display: block;
+  font-size: 18px;
+}
+.portfolios-tab-list .filters li span {
+  background-color: #d7d7d7;
+  color: #666;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.65em;
+  margin: 0 0 10px;
+  padding: 5px 20px;
+  text-decoration: none;
+  width: 100%;
+}
+.portfolios-tab-list .filters li span.active {
+  background-color: #c41230 !important;
+  color: #FFFFFF;
+}
+
+.side-list {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.side-list li {
+  display: inline-block;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1159,6 +1245,18 @@ object {
   .page-banner {
     height: 100px;
   }
+
+  .portfoliolist .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .portfoliolist .portfolio {
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 568px) {
   .p30 {
@@ -1175,6 +1273,17 @@ object {
 
   .page-banner {
     height: 125px;
+  }
+
+  .client-samples .flexxed {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .client-samples .portfolio {
+    width: 50%;
+  }
+  .client-samples .more-work {
+    font-size: 19px;
   }
 }
 @media only screen and (min-width: 640px) {
@@ -1295,8 +1404,24 @@ object {
     transition: all 0.15s ease-in-out;
   }
 
+  .client-samples .more-work {
+    font-size: 21px;
+  }
+
   .page-banner {
     height: 150px;
+  }
+
+  .page-intro {
+    margin: 0 0 35px 0;
+  }
+
+  .portfolios-tab-list .filters li {
+    display: inline-block;
+  }
+
+  .portfoliolist .portfolio {
+    width: 33%;
   }
 
   .team-page.flexxed {
@@ -1373,8 +1498,33 @@ object {
     padding: 100px 30px 80px;
   }
 
+  .client-samples .portfolio {
+    width: 25%;
+  }
+
   .page-banner {
     height: 175px;
+  }
+
+  .portfolios-tab-list .filters li {
+    position: relative;
+  }
+  .portfolios-tab-list .filters li span::after {
+    border-style: solid;
+    border-width: 15px 15px 0;
+    border-color: #d7d7d7 transparent transparent;
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 0;
+  }
+  .portfolios-tab-list .filters li span.active::after {
+    border-color: #c41230 transparent transparent;
   }
 
   .top-footer li {
@@ -1405,11 +1555,19 @@ object {
     padding: 30px 0 20px 0;
   }
 
+  .portfoliolist .portfolio {
+    width: 25%;
+  }
+
   .team-block {
     width: 31%;
   }
 }
 @media only screen and (min-width: 1200px) {
+  .client-samples .more-work {
+    font-size: 23px;
+  }
+
   .page-banner {
     height: 200px;
   }

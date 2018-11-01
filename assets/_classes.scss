@@ -26,7 +26,7 @@
 	display: block;
 	padding: 0 10px;
 	max-width: 1200px;
-	min-width: 320px;
+	// min-width: 320px;
 	margin: 0 auto;
 
 	&.sm {
@@ -87,6 +87,7 @@ a.social-icon {
 .page-title {
 	border-bottom: 2px solid $accent;
 	color: $accent;
+	margin: 0 0 25px 0;
 }
 
 // MODULES
@@ -162,7 +163,7 @@ a.quick-link {
 	}
 }
 
-// Tabbed Boasts
+// TABBED BOASTS
 .boasts {
 	background-color: $ltgray;
 }
@@ -212,5 +213,13 @@ a.quick-link {
 	&.active {
 		display: block;
 		padding: 20px 0 0;
+	}
+}
+
+// CLIENT SAMPLES
+a.dark-mask {
+
+	img {
+		display: block;
 	}
 }

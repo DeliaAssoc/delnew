@@ -57,6 +57,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  html {
 	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	overflow-y: scroll;// Fix extra spacing on portfolio page initial rendering with isotope.js
 }
 
 /* Sections

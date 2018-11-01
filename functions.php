@@ -127,7 +127,7 @@ function del_scripts() {
 	wp_enqueue_style( 'del-fontawesome-style5', get_template_directory_uri() . '/css/fontawesome-all.min.css' );
 
 	// Add font-awesome.css
-	wp_enqueue_style( 'dae-fontawesome-style4', get_template_directory_uri() . '/css/font-awesome.min.css' );
+	wp_enqueue_style( 'del-fontawesome-style4', get_template_directory_uri() . '/css/font-awesome.min.css' );
 
 	// Add slick-theme.css
 	wp_enqueue_style( 'del-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
@@ -138,8 +138,10 @@ function del_scripts() {
 
 	wp_enqueue_script( 'del-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'del-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( ), '1.2.0', true );
+
 	// Add custom.js
-	wp_enqueue_script( 'msc-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
+	wp_enqueue_script( 'del-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

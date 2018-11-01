@@ -4,6 +4,23 @@
     .page-banner {
         height: 100px;
     }
+
+    // PORTFOLIO PAGES
+    .portfoliolist {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+
+        .portfolio {
+            width: 50%;
+        }
+    }
 }
 
 @media only screen and ( min-width: 568px ) {
@@ -24,6 +41,23 @@
     // ALL PAGE STYLES
     .page-banner {
         height: 125px;
+    }
+
+    // PORTFOLIO PAGES
+    .client-samples {
+
+        .flexxed {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .portfolio {
+            width: 50%;
+        }
+
+        .more-work {
+            font-size: 19px;
+        }
     }
 }
 
@@ -164,11 +198,40 @@
         }
     }
 
+    .client-samples {
+
+        .more-work {
+            font-size: 21px;
+        }
+    }
+
     // ALL PAGE STYLES
     .page-banner {
         height: 150px;
     }
+
+    .page-intro {
+        margin: 0 0 35px 0;
+    }
     
+    // PORTFOLIO PAGES
+    .portfolios-tab-list {
+
+        .filters {
+
+            li {
+                display: inline-block;
+            }
+        }
+    }
+
+    .portfoliolist {
+
+        .portfolio {
+            width: 33%;
+        }
+    }
+
     // TEAM PAGES
     .team-page {
 
@@ -269,10 +332,53 @@
             padding: 100px 30px 80px;
         }
     }
+    
+    .client-samples {
+
+        .portfolio {
+            width: 25%;
+        }
+    }
 
     // ALL PAGE STYLES
     .page-banner {
         height: 175px;
+    }
+
+    //  PORTFOLIO PAGES
+    .portfolios-tab-list {
+
+        .filters {
+
+            li {
+                position: relative;
+
+                span {
+
+                    &::after {
+                        border-style: solid;
+                        border-width: 15px 15px 0;
+                        border-color: #d7d7d7 transparent transparent;
+                        bottom: -5px;
+                        content: '';
+                        display: block;
+                        height: 0;
+                        left: 0;
+                        margin: 0 auto;
+                        position: absolute;
+                        right: 0;
+                        width: 0;
+                    }
+
+                    &.active {
+
+                        &::after {
+                            border-color: $accent transparent transparent;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // FOOTER
@@ -317,16 +423,32 @@
         }
     }
 
-        // TEAM PAGES
-        .team-block {
-            width: 31%;
+    // PORTFOLIO PAGES
+    .portfoliolist {
+
+        .portfolio {
+            width: 25%;
         }
+    }
+
+    // TEAM PAGES
+    .team-block {
+        width: 31%;
+    }
 }
 
 @media only screen and ( min-width: 1200px ) {
 
-        // ALL PAGE STYLES
-        .page-banner {
-            height: 200px;
+    // MODULES
+    .client-samples {
+
+        .more-work {
+            font-size: 23px;
         }
+    }
+
+    // ALL PAGE STYLES
+    .page-banner {
+        height: 200px;
+    }
 }

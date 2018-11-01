@@ -48,7 +48,7 @@
 <section id="client-samples" class="client-samples">
 	<ul class="flexxed">
 	<?php
-		$query = new WP_Query( array( 'post_type' => 'client', 'showposts' => 4, 'orderby' => 'rand' ) );
+		$query = new WP_Query( array( 'post_type' => 'portfolios', 'showposts' => 4, 'orderby' => 'rand' ) );
 			
 		while ( $query->have_posts() ) : $query->the_post(); ?>
 
@@ -58,12 +58,7 @@
 				<a class="dark-mask" href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
 				</a>
-			<!-- /post thumbnail -->
-				<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<h2 class="broll-text">
-						<?php the_title(); ?>
-					</h2>
-				</a> -->
+			    <!-- /post thumbnail -->
 			</li>	
 
 		<?php endwhile;
