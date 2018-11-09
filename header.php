@@ -29,29 +29,37 @@
 
 	<header id="masthead" class="site-header">
 		<div class="constrain">
-			<div class="site-branding">
+			<div class="flexxed">
+				<div class="header-left">
+					<div class="site-branding">
+						<a href="/" class="logo">
+							<img src="<?php echo get_theme_mod( 'theme_logo' ); ?>" alt="Delia Logo">
+						</a>
+						<div class="tagline">
+							<?php echo get_theme_mod( 'theme_tagline' ); ?>
+						</div>
+					</div><!-- .site-branding -->
+				</div>
+				<div class="header-right">
+					<a class="contact-phone" href="tel:<?php echo get_theme_mod( 'theme_company_phone' ); ?>"><?php echo get_theme_mod( 'theme_company_phone' ); ?></a>
+					<div class="header-cta <?php the_field( 'header_call_to_action_bg_color', 'options' ); ?>">
+						<a href="<?php the_field( 'header_call_to_action_link', 'options' ); ?>"><?php the_field( 'header_call_to_action_text', 'options' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+					<a class="menu-toggle" href="#"></a>
+				</div>
+			</div>
+		</div>
+		<nav id="site-navigation" class="main-navigation">
+			<div class="constrain">
+				<div id="close-menu" class="close-menu"></div>
 				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$del_description = get_bloginfo( 'description', 'display' );
-				if ( $del_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $del_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
-		</div>
-		<div class="constrain">
-			<nav id="site-navigation" class="main-navigation">
-			</nav><!-- #site-navigation -->
-		</div>
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'main-menu',
+					) );
+				?>
+				</div>
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

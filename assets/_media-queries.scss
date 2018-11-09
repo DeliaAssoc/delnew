@@ -21,6 +21,17 @@
             width: 50%;
         }
     }
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 253px;
+            }
+        }
+    }
 }
 
 @media only screen and ( min-width: 568px ) {
@@ -59,9 +70,77 @@
             font-size: 19px;
         }
     }
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 303px;
+            }
+        }
+    }
 }
 
 @media only screen and ( min-width: 640px ) {
+
+    // HEADER
+    .site-header {
+        padding: initial;
+    }
+
+    .header-right {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+        max-width: 460px;
+    }
+
+    .header-cta {
+        display: inline-block;
+        height: 95px;
+        padding: 35px 10px 0;
+        position: relative;
+        top: 0;
+
+        a {
+            color: $lightest;
+
+            i {
+                border: 1px solid $lightest;
+                font-weight: 600;
+                margin: 0 0 0 5px;
+                padding: 0 0 2px 3px;
+                text-align: center;
+                width: 25px;
+            }
+        }
+    }
+
+    a.menu-toggle {
+
+        &::before {
+            top: 0;
+        }
+    }
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 345px;
+            }
+        }
+    }
 
     // TEAM PAGES
     .teammembers {
@@ -232,6 +311,31 @@
         }
     }
 
+    // RESOURCES PAGE
+    .resources-list {
+
+        &.flexxed {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .resources-item {
+            width: 47.5%;
+        }
+    }
+
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 198px;
+            }
+        }
+    }
+
     // TEAM PAGES
     .team-page {
 
@@ -309,7 +413,32 @@
     }
 }
 
+@media only screen and ( min-width: 860px ) {
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 222px;
+            }
+        }
+    }
+}
+
 @media only screen and ( min-width: 900px ) {
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 233px;
+            }
+        }
+    }
 
     // TEAM PAGES
     .team-block {
@@ -317,9 +446,33 @@
     }
 } 
 
+@media only screen and ( min-width: 922px ) {
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 240px;
+            }
+        }
+    }
+} 
+
 @media only screen and ( min-width: 960px ) {
 
     // CLASSES
+    .menu-item-has-children {
+        position: relative;
+
+        > .sub-menu {
+            position: absolute;
+            left: 100%;
+            top: 20px;
+            width: 260px;
+        }
+    }
 
     // MODULES
     a.quick-link {
@@ -338,6 +491,29 @@
         .portfolio {
             width: 25%;
         }
+    }
+
+    // HEADER
+    .site-header {
+
+        .tagline {
+            display: inline-block;
+            padding: 0 0 10px 15px;;
+        }
+    }
+
+    .header-left,
+    .header-right {
+        width: 50%;
+    }
+
+    .site-branding {
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
 
     // ALL PAGE STYLES
@@ -377,6 +553,17 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 250px;
             }
         }
     }
@@ -431,9 +618,35 @@
         }
     }
 
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 267px;
+            }
+        }
+    }
+
     // TEAM PAGES
     .team-block {
         width: 31%;
+    }
+}
+
+@media only screen and ( min-width: 1100px ) {
+
+    // RESOURCES PAGE
+    .resources-item {
+
+        &.video {
+            
+            iframe {
+                height: 288px;
+            }
+        }
     }
 }
 
@@ -451,4 +664,15 @@
     .page-banner {
         height: 200px;
     }
+
+        // RESOURCES PAGE
+        .resources-item {
+
+            &.video {
+                
+                iframe {
+                    height: 318.67px;
+                }
+            }
+        }
 }

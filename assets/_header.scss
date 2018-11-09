@@ -1,0 +1,64 @@
+// HEADER
+.site-header {
+    background-color: rgba(236,239,241,.75);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+
+    .flexxed {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .tagline {
+        display: none;
+    }
+}
+
+.header-left {
+    width: 30%;
+
+    a.logo {
+        display: inline-block;
+        max-width: 100px;
+        width: 100%;
+    }
+}
+
+.header-right {
+    text-align: right;
+    width: 67.5%;
+}
+
+.header-cta {
+    display: none;
+}
+
+a.contact-phone {
+    color: $darkest;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+}
+
+a.menu-toggle {
+    color: $darkest;
+    font-family: 'delia_icons';
+    font-size: 25px;
+    font-weight: 600;
+
+    &::before {
+        content: '\e906';
+        position: relative;
+        top: 5px;
+    }
+}

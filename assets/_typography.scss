@@ -81,3 +81,19 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+@font-face {
+	font-family: 'Font-Name';
+	src: url(fonts/font-name.eot);
+	src: url(fonts/font-name.eot?#iefix) format("embedded-opentype"),url(fonts/font-name.woff) format("woff"),url(fonts/font-name.ttf) format("truetype"),url(fonts/font-name.svg#font-name) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'delia_icons';
+	src: url(fonts/delia_icons.eot?677woo);
+	src: url(fonts/delia_icons.eot?677woo#iefix) format("embedded-opentype"),url(fonts/delia_icons.ttf?677woo) format("truetype"),url(fonts/delia_icons.woff?677woo) format("woff"),url(fonts/delia_icons.svg?677woo#delia_icons) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}

@@ -1,5 +1,45 @@
  $( document ).ready( function() {
 
+	// Variables
+	$mNav = $( '.main-navigation' ),
+	$mChilds = $( '.menu-item-has-children' ),
+	$hHeight = $( '.site-header' ).outerHeight();
+
+	console.log( $hHeight );
+
+	// Move site content down to line up with header(Due to position:fixed header)
+	$( '.site-content' ).css( 'paddingTop', $hHeight );
+
+
+
+
+
+	// Open Modal Nav
+	$( '.menu-toggle' ).on( 'click', function( e ){
+
+		e.preventDefault();
+		$mNav.fadeIn();
+	});
+
+	// Close Modal Nav
+	$mNav.on( 'click', '.close-menu', function( e ){
+
+		e.preventDefault();
+		$( this ).closest( $mNav ).fadeOut();
+	});
+
+	// Open Sub Navigation on Main Menu
+	$mNav.on( 'click', '.menu-item-has-children', function( e ){
+		
+		if ( $( this ).find( '.sub-menu' ).hasClass( 'open' ) ) {
+			$( this ).find( '.sub-menu' ).removeClass( 'open' ).slideUp();
+		} else {
+			$mNav.find( '.sub-menu' ).removeClass( 'open' ).slideUp();
+			$( this ).find( '.sub-menu' ).addClass( 'open' ).slideDown();
+		}
+	
+	});
+
 
 
 
@@ -26,7 +66,6 @@
 
 			// Add active class to selected tab-content from tab-link a
 			$( '.tab-content' ).find( '#' + $clicked ).addClass( 'active' ).fadeIn();
-
 		}
 	);
 
@@ -49,6 +88,10 @@
 			e.preventDefault();
 		});
 	});
+
+
+
+
 
 	// Homepage modal for video
 	var $modal = $( '#youtube-modal' ),
