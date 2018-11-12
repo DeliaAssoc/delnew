@@ -1092,8 +1092,28 @@ a.menu-toggle::before {
   color: #FFFFFF;
 }
 
-.portfoliolist {
-  z-index: -1;
+.portfoliolist li {
+  overflow: hidden;
+}
+.portfoliolist li img {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  -ms-transition: -ms-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+}
+.portfoliolist li:hover img {
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  -ms-transition: -ms-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
 }
 
 .side-list {

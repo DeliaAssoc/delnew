@@ -97,9 +97,35 @@
 	}
 }
 
-.portfoliolist {
-	z-index: -1;
+.portfoliolist li {
+	overflow: hidden;
+
+	img {
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05);
+		-webkit-transition: -webkit-transform .4s ease-in-out;
+		-ms-transition: -ms-transform .4s ease-in-out;
+		transition: transform .4s ease-in-out;
+	}
+
+	&:hover img {
+		-moz-transform: scale(1.25);
+		-webkit-transform: scale(1.25);
+		-o-transform: scale(1.25);
+		-ms-transform: scale(1.25);
+		transform: scale(1.25);
+		-webkit-transition: -webkit-transform .4s ease-in-out;
+		-ms-transition: -ms-transform .4s ease-in-out;
+		transition: transform .4s ease-in-out;
+	}
 }
+
+// .portfoliolist {
+// 	z-index: -1;
+// }
 
 .side-list {
 	margin: 0 auto;
