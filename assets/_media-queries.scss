@@ -293,6 +293,28 @@
         margin: 0 0 35px 0;
     }
     
+    // CONTACT PAGE
+    .content-w-sidebar {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .contact-main-content {
+            width: 61%;
+        }
+
+        .sidebar {
+            width: 32%;
+        }
+    }
+
     // PORTFOLIO PAGES
     .portfolios-tab-list {
 
