@@ -72,7 +72,44 @@
 
 
 
+	// TABBED CONTENT ON WHAT WE DO TEMPLATE PAGES
 
+	// Display first target and content block as default page load
+	$( '.boast-selector-target:first-of-type' ).addClass( 'active' );
+	$( '.boast-content:first-of-type' ).addClass( 'active' );
+
+	$( '.boast-selectors .boast-selector-target' ).on( 'click', function( e ){
+
+		e.preventDefault();
+
+		$allTargets = $( '.boast-selectors .boast-selector-target' ),
+		$allContent = $( '.boasts-content .boast-content' ),
+		$hitTarget = $( this ),
+		$currSelected = $hitTarget.data( 'ref' ),
+		$selContent = $('#' + $currSelected );
+
+		if ( !$hitTarget.hasClass( '.active' ) ) {
+
+			$allTargets.removeClass( 'active' );
+			$hitTarget.addClass( 'active' );
+		}
+
+		if ( !$selContent.hasClass( 'active' ) ) {
+
+			// Remove active from all blocks
+			$allContent.removeClass( 'active' );
+
+			// Add active to selected block
+			$selContent.addClass( 'active' );
+
+		}
+
+	});
+
+
+
+
+	
 	// Sorting animation on portfolio page
 	var isotopeContainer = $('#portfoliolist');
 	if( !isotopeContainer.length || !jQuery().isotope ) return;

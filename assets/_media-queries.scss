@@ -32,6 +32,15 @@
             }
         }
     }
+
+    // WHAT WE DO TEMPLATE
+	.boast-text-content {
+		margin: 0;
+	}
+
+	.boast-text-btns {
+		margin: 25px 0;
+	}
 }
 
 @media only screen and ( min-width: 568px ) {
@@ -58,8 +67,12 @@
     .client-samples {
 
         .flexxed {
-            flex-direction: row;
-            flex-wrap: wrap;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
         }
 
         .portfolio {
@@ -198,6 +211,7 @@
     }
 
     // MODULES
+    // Quick Links
     .quick-links {
 
         .flexxed {
@@ -252,7 +266,7 @@
                 height: 0;
                 border-style: solid;
                 border-width: 0px 25px 0 25px;
-                border-color: #c4122f transparent transparent transparent;
+                border-color: $accent transparent transparent transparent;
                 bottom: 0;
                 left: 40%;
                 position: absolute;
@@ -267,7 +281,7 @@
                     height: 0;
                     border-style: solid;
                     border-width: 25px 25px 0 25px;
-                    border-color: #c4122f transparent transparent transparent;
+                    border-color: $accent transparent transparent transparent;
                     bottom: -25px;
                     left: 40%;
                     position: absolute;
@@ -277,10 +291,33 @@
         }
     }
 
+    // Client Samples
     .client-samples {
 
         .more-work {
             font-size: 21px;
+        }
+    }
+
+    // Brand Assessment Form Module
+    .brand-assessment-form {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .ba-intro {
+            width: 32%;
+        }
+
+        .ba-form {
+            width: 64%;
         }
     }
 
@@ -337,10 +374,18 @@
     .resources-list {
 
         &.flexxed {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
 
         .resources-item {
@@ -387,6 +432,129 @@
     .team-title {
         text-align: left;
     }
+
+    // WHAT WE DO TEMPLATE
+    .what-boasts {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .boast-selectors {
+		margin: 0 0 30px 0;
+	}
+
+	.boast-selector-target {
+		height: auto;
+		overflow: initial;
+        width: 31.5%;
+        
+        .boast-img-wrapper {
+            display: block;
+            position: relative;
+
+            &::after {
+                border-style: solid;
+                border-width: 0 25px 0 25px;
+                border-color: $accent transparent transparent transparent;
+                bottom: 0;
+                content: '';
+                height: 0;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                width: 0;
+                @include transfast();
+            }
+        }
+
+        &.active {
+
+            .boast-img-wrapper {
+
+                &::after {
+                    border-width: 25px 25px 0 25px;
+                    bottom: -25px;
+                    @include transfast();
+                }
+            }
+        }
+	}
+
+	.boast-selector-target img,
+	.boast-selector-target .boast-selector-title {
+        display: block;
+		left: initial;
+		overflow: initial;
+		position: inherit;
+		right: initial;
+		top: initial;
+		transform: none;
+	}
+
+	.boast-selector-target .boast-selector-title {
+		color: #000000;
+		display: inline-block;
+		margin: 60px auto 0 auto;
+		position: relative;
+		width: 100%;
+	}
+
+	.boast-selector-target.active .boast-selector-title {
+		color: #ad102e;
+	}
+
+	.boast-content.flexxed {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
+	}
+
+	.boast-content .content-img {
+		width: 33%;
+	}
+
+	.boast-content .boast-text-content {
+		width: 63%;
+	}
+
+	.boast-text-btns {
+		margin: 40px 0 0 0;
+	}
+
+	.boast-btn {
+		margin: 0;
+		width: 48%;
+	}
+
+	.steps-wrapper.flexxed {
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+	}
+
+	.step-item {
+		width: 33.5%;
+	}
+
+	.aff-logos img {
+		width: 31%;
+	}
+
+	.page-template-what-template #portfoliolist .portfolio {
+		width: 50%;
+	}
 
     // FOOTER
     .top-footer {
@@ -466,6 +634,15 @@
     .team-block {
         width: 32%;
     }
+
+    // WHAT WE DO TEMPLATE
+    .step-item {
+		width: 24%;
+	}
+
+	.page-template-what-template #portfoliolist .portfolio {
+		width: 25%;
+	}
 } 
 
 @media only screen and ( min-width: 922px ) {
@@ -656,6 +833,19 @@
     .team-block {
         width: 31%;
     }
+
+    // WHAT WE DO TEMPLATE
+    .boast-selectors {
+		margin: 0 0 50px 0;
+	}
+
+	.boast-content .content-img {
+		width: 24%;
+	}
+	
+	.boast-content .boast-text-content {
+		width: 72%;
+	}
 }
 
 @media only screen and ( min-width: 1100px ) {
@@ -670,6 +860,11 @@
             }
         }
     }
+
+    // WHAT WE DO TEMPLATE
+    .aff-logos img {
+		width: 15.5%;
+	}
 }
 
 @media only screen and ( min-width: 1200px ) {

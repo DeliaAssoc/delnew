@@ -62,8 +62,14 @@
 	padding: 20px 0;
 }
 
-.red-bg {
+.red-bg,
+a.red-bg {
 	background-color: $accent;
+	color: $lightest;
+
+	&:visited {
+		color: $lightest;
+	}
 }
 
 
@@ -169,7 +175,7 @@ a.quick-link {
 	}
 }
 
-// TABBED BOASTS
+// Tabbed Boasts
 .boasts {
 	background-color: $ltgray;
 }
@@ -219,6 +225,33 @@ a.quick-link {
 	&.active {
 		display: block;
 		padding: 20px 0 0;
+	}
+}
+
+// Brand Assessment Form Module
+.brand-assessment-form {
+	
+	&.red-bg {
+
+		h3 {
+			color: $lightest;
+			font-size: 23px;
+			margin: 0 0 30px 0;
+			text-transform: uppercase;
+
+			&::after {
+				border-bottom: 2px solid $lightest;
+				bottom: -13px;
+				content: '';
+				display: block;
+				position: relative;
+				width: 50%;
+			}
+		}
+	}
+
+	.ba-intro {
+		margin: 0 0 15px 0;
 	}
 }
 
