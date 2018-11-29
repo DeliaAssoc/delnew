@@ -210,6 +210,22 @@
         padding: 40px 0;
     }
 
+    .half {
+        width: 47%;
+    }
+
+    .one-fourth {
+        width: 47%;
+    }
+
+    .one-third {
+        width: 31%;
+    }
+
+    .two-thirds {
+        width: 63%;
+    }
+
     // MODULES
     // Quick Links
     .quick-links {
@@ -330,6 +346,27 @@
         margin: 0 0 35px 0;
     }
     
+    // CAREER PAGE
+    .core-values {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        }
+    }
+
+    .core-value {
+        margin: 0 0 30px;
+        padding: 25px;
+        width: 48%;
+    }
+
     // CONTACT PAGE
     .content-w-sidebar {
 
@@ -349,6 +386,22 @@
 
         .sidebar {
             width: 32%;
+        }
+    }
+
+    // DEFAULT PAGES
+    .dp-additional-sections {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
     }
 
@@ -720,6 +773,12 @@
         height: 175px;
     }
 
+    // CAREER PAGE
+    .core-value {
+        padding: 30px;
+        width: 46%;
+    }
+
     //  PORTFOLIO PAGES
     .portfolios-tab-list {
 
@@ -800,6 +859,14 @@
 
     .p60 {
         padding: 60px 0;
+    }
+
+    .two-thirds {
+        width: 64%;
+    }
+
+    .one-fourth {
+        width: 22%;
     }
 
     .top-footer {

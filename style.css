@@ -421,6 +421,16 @@ template {
   padding: 20px 0;
 }
 
+.white-bg,
+a.white-bg {
+  background-color: #FFFFFF;
+}
+
+.ltgray-bg,
+a.ltgray-bg {
+  background-color: #eceff1;
+}
+
 .red-bg,
 a.red-bg {
   background-color: #af0b2a;
@@ -648,7 +658,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 p {
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+}
+p:last-of-type {
+  margin: 0;
 }
 
 dfn, cite, em, i {
@@ -1048,8 +1061,52 @@ a.menu-toggle::before {
   margin: 0 0 25px 0;
 }
 
+.core-intro {
+  margin: 0 0 20px;
+}
+
+.core-value {
+  background-position: center center;
+  background-size: cover;
+  padding: 20px;
+  margin: 0 0 20px;
+}
+.core-value h3 {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  padding: 0 0 10px;
+}
+.core-value p {
+  color: #FFFFFF;
+}
+
+.apply {
+  text-align: center;
+}
+.apply .btn {
+  display: block;
+  font-size: 16px;
+  margin: 20px auto 0 auto;
+  max-width: 530px;
+  padding: 13px;
+  text-align: center;
+}
+
 .sidebar-content {
   margin: 0 0 30px 0;
+}
+
+.dp-additional-sections h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.as-content-block {
+  margin: 0 0 15px 0;
+}
+.as-content-block:last-of-type {
+  margin: 0;
 }
 
 .p-hero-image {
@@ -1730,6 +1787,22 @@ object {
     padding: 40px 0;
   }
 
+  .half {
+    width: 47%;
+  }
+
+  .one-fourth {
+    width: 47%;
+  }
+
+  .one-third {
+    width: 31%;
+  }
+
+  .two-thirds {
+    width: 63%;
+  }
+
   .quick-links .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1832,6 +1905,23 @@ object {
     margin: 0 0 35px 0;
   }
 
+  .core-values .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .core-value {
+    margin: 0 0 30px;
+    padding: 25px;
+    width: 48%;
+  }
+
   .content-w-sidebar.flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1846,6 +1936,18 @@ object {
   }
   .content-w-sidebar .sidebar {
     width: 32%;
+  }
+
+  .dp-additional-sections .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .portfolios-tab-list .filters li {
@@ -2129,6 +2231,11 @@ object {
     height: 175px;
   }
 
+  .core-value {
+    padding: 30px;
+    width: 46%;
+  }
+
   .portfolios-tab-list .filters li {
     position: relative;
   }
@@ -2176,6 +2283,14 @@ object {
 
   .p60 {
     padding: 60px 0;
+  }
+
+  .two-thirds {
+    width: 64%;
+  }
+
+  .one-fourth {
+    width: 22%;
   }
 
   .top-footer.p30 {

@@ -17,9 +17,62 @@
 	margin: 0 0 25px 0;
 }
 
+// CAREER PAGE
+.core-intro {
+	margin: 0 0 20px;
+}
+
+.core-value {
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+	margin: 0 0 20px;
+	
+	h3 {
+		border-bottom: 2px solid #fff;
+		color: #fff;
+		font-size: 22px;
+		padding: 0 0 10px;
+	}
+	
+	p {
+		color: $lightest;
+	}
+}
+
+.apply {
+	text-align: center;
+
+	.btn {
+		display: block;
+		font-size: 16px;
+		margin: 20px auto 0 auto;
+		max-width: 530px;
+		padding: 13px;
+		text-align: center;
+	}
+}
+
 // CONTACT PAGE
 .sidebar-content {
 	margin: 0 0 30px 0;
+}
+
+// DEFAULT PAGES
+.dp-additional-sections {
+
+	h2 {
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+}
+
+.as-content-block {
+	margin: 0 0 15px 0;
+
+	&:last-of-type {
+		margin: 0;
+	}
 }
 
 // PORTFOLIO PAGES

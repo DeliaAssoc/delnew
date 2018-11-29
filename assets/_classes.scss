@@ -62,6 +62,16 @@
 	padding: 20px 0;
 }
 
+.white-bg,
+a.white-bg {
+	background-color: $lightest;
+}
+
+.ltgray-bg,
+a.ltgray-bg {
+	background-color: $ltgray;
+}
+
 .red-bg,
 a.red-bg {
 	background-color: $accent;
@@ -71,8 +81,6 @@ a.red-bg {
 		color: $lightest;
 	}
 }
-
-
 
 // SOCIAL MEDIA
 .social-media {

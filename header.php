@@ -21,6 +21,13 @@
 	<script  async='async' src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
 
 	<?php wp_head(); ?>
+
+	<?php if ( get_field( 'additional_page_styling' ) == 'yes' ) : ?>
+		<style>
+			<?php the_field( 'css_styling' ); ?>
+		</style>
+	<?php endif; ?>
+
 </head>
 
 <body <?php body_class(); ?>>
