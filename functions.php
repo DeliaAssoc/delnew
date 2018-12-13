@@ -132,6 +132,9 @@ function del_scripts() {
 	// Add slick-theme.css
 	wp_enqueue_style( 'del-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
 
+	wp_register_style( 'del-animate-style', get_stylesheet_directory_uri() . '/css/animate.css'  );
+	wp_enqueue_style( 'del-animate-style' );
+
 	wp_enqueue_style( 'del-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'del-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

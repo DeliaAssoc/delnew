@@ -5,11 +5,11 @@
 	$mChilds = $( '.menu-item-has-children' ),
 	$hHeight = $( '.site-header' ).outerHeight();
 
-	console.log( $hHeight );
 
+
+	
 	// Move site content down to line up with header(Due to position:fixed header)
 	$( '.site-content' ).css( 'paddingTop', $hHeight );
-
 
 
 
@@ -70,6 +70,7 @@
 	);
 
 
+	
 
 
 	// TABBED CONTENT ON WHAT WE DO TEMPLATE PAGES
@@ -109,7 +110,65 @@
 
 
 
+
+	// Homepage modal for video
+	var $modal = $( '#youtube-modal' ),
+		$modalBtn = $( '#comp-vid-play' ),
+		$modalClose = $( '.close' );
+
+
+	$modalBtn.on( 'click', function( e ){
+
+		e.preventDefault();
+		$modal.fadeIn();
+	});
+
+	$modal.on( 'click', function(){
+		$modal.fadeOut();
+	});
+
+	$modalClose.on( 'click', function(){
+		$modal.fadeOut();
+	});
+
+	$( '.home-slider .slider' ).slick({
+		infinite: true,
+		autoplay: false,
+		autoplaySpeed: 5000
+	});
+
 	
+	$hmSlides = $( '.home-slider' ).find( '.slide' );
+
+	// Turn text animation on or off depending on current slide
+	function textAnimationTimer() {
+
+		setTimeout( function(){
+			$currentSlide = $hmSlides.find( '.slick-current' );
+			$slide = $( '.slick-current' );
+			$noSLide = $( '.slide' ).not( '.slick-current' );
+			
+			$slide.find( '.animated' ).css( 'display', 'block' );
+			$noSLide.find( '.animated' ).css( 'display', 'none' );
+
+			textAnimationTimer();
+		}, 1500);
+
+	}
+	
+	textAnimationTimer();
+
+	// use js to play videos on chrome
+	$video = $( '.home-slider' ).find( '.video' );
+	$i = 0;
+	$.each( $video, function(){
+		$video[$i].play();
+		$i++;
+	});
+
+
+
+
 	// Sorting animation on portfolio page
 	var isotopeContainer = $('#portfoliolist');
 	if( !isotopeContainer.length || !jQuery().isotope ) return;
@@ -127,27 +186,6 @@
 	});
 
 
-
-
-
-	// Homepage modal for video
-	var $modal = $( '#youtube-modal' ),
-		$modalBtn = $( '#comp-vid-play' ),
-		$modalClose = $( '.close' );
-
-	$modalBtn.on( 'click', function( e ){
-
-		e.preventDefault();
-		$modal.fadeIn();
-	});
-
-	$modal.on( 'click', function(){
-		$modal.fadeOut();
-	});
-
-	$modalClose.on( 'click', function(){
-		$modal.fadeOut();
-	});
 
 
 

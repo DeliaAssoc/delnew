@@ -11,38 +11,82 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<!-- BOASTS MODULE -->
-<?php if ( get_field( 'boasts', 'options' ) ) : ?>
+<section class="home-slider">
+	
+	<?php if ( have_rows( 'homepage_slider' ) ) : ?>
+		<div class="slider">
+		<?php $i = count( get_field( 'homepage_slider' ) ); ?>
+		<?php while ( have_rows( 'homepage_slider' ) ) : the_row(); ?>
+			<div class="slide">
+				<?php $file = get_sub_field( 'slide_video_file' ); ?>
+				<video autoplay loop muted id="video-<?php echo $i; ?>" class="hp-slider-element video" src="<?php echo $file[ 'url' ]; ?>" type="video/mp4" loop></video>
+				<div class="constrain">
+					<div class="slide-text">
+						<div class="text fadeInRight animated"><?php the_sub_field( 'slide_content' ); ?></div>
+						<div class="red-diamond fadeInLeft animated"><img src="http://localhost/delianew/wp-content/themes/del/img/red-diamond.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		<?php endwhile; ?>
+		</div><!-- .slider -->
+	<?php endif; ?>
+</section><!-- .home-slider -->
+
 <section class="boasts p45">
-    <?php $boastCount = count( get_field( 'boasts', 'options' ) ); ?>
-    <div class="constrain md">
-        <div class="tab-links">
-            <div class="flexxed">
-                <?php while ( have_rows( 'boasts', 'options' ) ) : the_row(); ?>
-                    <!-- create unique data-ref -->
-                    <?php $ref = str_replace( ' ', '', strtolower( substr( get_sub_field( 'boast_title', 'options' ), 0, 5 ) ) ); ?>
+	<div class="constrain">
+		<div class="boasts-container flexxed">
+			<?php if ( have_rows( 'boasts' ) ) :
+				$count = count( get_field( 'boasts' ) ); ?>
+				<?php while ( have_rows( 'boasts' ) ) : the_row(); ?>
+					
+					<div class="boast-block items-<?php echo $count; ?> <?php the_sub_field( 'boast_color' ); ?>">
+						<h2><?php the_sub_field( 'boast_title' ); ?></h2>
+						<div class="boast-text">
+							<?php the_sub_field( 'boast_content' ); ?>
+						</div>
+						<div class="boast-links">
+							<a class="btn white-brdr" href="<?php the_sub_field( 'boast_learn_more_url' ); ?>">
+								<span>Learn More</span>
+							</a>
+						</div>
+					</div>
 
-                    <a href="#" data-ref="<?php echo $ref; ?>" class="link count-<?php echo $boastCount; ?>">
-                        <h3><?php the_sub_field( 'boast_title', 'options' ); ?></h3>
-                    </a>
-                <?php endwhile; ?>
-            </div>
-        </div>
-        <div class="tab-content">
-            <?php while ( have_rows( 'boasts', 'options' ) ) : the_row(); ?>
-                <!-- create unique data-ref -->
-                <?php $ref = str_replace( ' ', '', strtolower( substr( get_sub_field( 'boast_title', 'options' ), 0, 5 ) ) ); ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
+	</div><!-- .constrain -->
+</section><!-- .boasts -->
 
-                <div id="<?php echo $ref; ?>" class="tab-content-block">
-                    <?php the_sub_field( 'boast_content', 'options' ); ?>
-                </div>
-            <?php endwhile; ?>
-        </div>
-    </div>
-</section>
-<?php endif; ?>
-<!-- BOASTS MODULE -->
-
+<section class="home-main-content">
+	<div class="constrain sm flexxed">
+		<div class="text-block">
+			<h1><?php the_field( 'main_content_title' ); ?></h1>
+			<div class="text">
+				<?php the_field( 'main_content_copy' ); ?>
+			</div>
+			<div class="cta-stats">
+				<div class="stat flexxed">
+					<div class="br-text"><?php the_field( 'roi_stat' ); ?></div>
+					<div class="stats-text">Average ROI</div>
+				</div>
+				<div class="stat flexxed">
+					<div class="br-text"><?php the_field( 'results_stats' ); ?></div>
+					<div class="stats-text">CEOs “delighted with the results”</div>
+				</div>
+				<div class="stat flexxed">
+					<div class="br-text"><?php the_field( 'launched_stats' ); ?></div>
+					<div class="stats-text">Brands Launched and Counting</div>
+				</div>
+			</div>
+			<a class="btn red-bg" href="<?php the_field( 'main_content_link_url' ); ?>" class="main-content-link"><span><?php the_field( 'main_content_link_text' ); ?></span></a>
+		</div>
+		<?php if ( get_field( 'main_content_image' ) ) :
+			$mImage = get_field( 'main_content_image' ); ?>
+			<!-- <a href="/brand-marketing/"><img src="<?php echo $mImage[ 'url' ]; ?>" alt="<?php echo $mImage[ 'alt' ]; ?>"></a> -->
+			<a class="mc-image" href="<?php the_field( 'main_content_link_url' ); ?>" class="main-content-link"><img src="<?php echo $mImage[ 'url' ]; ?>" alt="<?php echo $mImage[ 'alt' ]; ?>"></a>
+		<?php endif; ?>
+	</div><!-- .constrain.sm -->
+</section><!-- .main-content -->
 
 <!-- CLIENT SAMPLES -->
 <section id="client-samples" class="client-samples">
@@ -65,13 +109,39 @@
 		wp_reset_query();
 	?>
 	</ul>
-	<div class="contain">
+	<div class="constrain">
 		<a class="more-work" href="/work/">See More Award Winning Work ></a>
 	</div>
 </section>
 <!-- CLIENT SAMPLES -->
 
+<section class="company-video p50" style="background-image: url( '<?php the_field( 'company_video_image' ); ?>' );">
+	<div class="constrain">
+		<?php the_field( 'company_video_text' ); ?>
+	</div><!-- .constrain -->
+</section><!-- .company-video -->
 
+<section class="callouts p50">
+	<div class="constrain">
+        <h2><?php the_field( 'callouts_title' ); ?></h2>
+        <div class="flexxed">
+            <?php if ( have_rows( 'callouts' ) ) : ?>
+                <?php while ( have_rows( 'callouts' ) ) : the_row(); ?>
+                    <div class="callout-item">
+                        <div class="callout-icon">
+                            <?php $cImage = get_sub_field( 'callout_icon' ); ?>
+                            <img src="<?php echo $cImage[ 'url' ]; ?>" alt="<?php echo $cImage[ 'alt' ]; ?>">
+                        </div>
+                        <div class="callout-text">
+                            <h4><?php the_sub_field( 'callout_title' ); ?></h4>
+                            <span><?php the_sub_field( 'callout_subtitle' ); ?></span>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+	</div><!-- .constrain -->
+</section><!-- .callouts -->
 
 <!-- QUICK LINKS MODULE -->
 <?php if ( get_field( 'quick_links', 'options' ) ) : ?>
