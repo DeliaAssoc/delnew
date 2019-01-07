@@ -25,7 +25,9 @@
         <div class="content-w-sidebar flexxed">
             <div class="contact-main-content">
                 <?php the_field( 'main_content_sidebar' ); ?>
-                <?php the_field( 'form_code_sidebar' ); ?>
+                <div class="ss-form-wrapper">
+                    <?php the_field( 'form_code_sidebar' ); ?>
+                </div>
             </div>
             <div class="sidebar">
                 <div class="sidebar-content">

@@ -403,6 +403,15 @@
         }
     }
 
+    // Affiliate Logos
+    .affiliate-logos {
+
+        .affiliate-block {
+            margin: 0 0 10px 0;
+            width: 22%;
+        }
+    }
+    
     // Brand Assessment Form Module
     .brand-assessment-form {
 
@@ -1226,10 +1235,19 @@
 @media only screen and ( min-width: 1200px ) {
 
     // MODULES
+    // Client Samples
     .client-samples {
 
         .more-work {
             font-size: 23px;
+        }
+    }
+
+    // Affiliate Logos
+    .affiliate-logos {
+
+        .affiliate-block {
+            width: 13.5%;
         }
     }
 

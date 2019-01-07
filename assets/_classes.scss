@@ -82,6 +82,16 @@ a.red-bg {
 	}
 }
 
+.mdgray-bg {
+	background-color: #555;
+	color: $lightest;
+}
+
+.darkest-bg {
+	background-color: #252525;
+	color: $lightest;
+}
+
 // SOCIAL MEDIA
 .social-media {
 	display: -webkit-box;
@@ -102,6 +112,10 @@ a.social-icon {
 	font-size: 20px;
 	line-height: 45px;
 	width: 45px;
+
+	&:visited {
+		color: $lightest;
+	}
 }
 
 .page-title {
@@ -260,6 +274,25 @@ a.quick-link {
 
 	.ba-intro {
 		margin: 0 0 15px 0;
+	}
+}
+
+// AFFILIATE LOGOS
+.affiliate-logos {
+
+	.flexxed {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+	}
+
+	.affiliate-block {
+		width: 45%;
 	}
 }
 

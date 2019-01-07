@@ -225,4 +225,12 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> 6
 	));
 
+	acf_add_options_page( array(
+		'page_title' 	=> 'Site General Options',
+        'menu_title'	=> 'Site General Options',
+        'menu_slug' 	=> 'theme-general-options',
+        'icon_url'		=> 'dashicons-screenoptions',
+        'position'		=> 60,
+    ));
+
 }

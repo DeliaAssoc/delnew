@@ -441,6 +441,16 @@ a.red-bg:visited {
   color: #FFFFFF;
 }
 
+.mdgray-bg {
+  background-color: #555;
+  color: #FFFFFF;
+}
+
+.darkest-bg {
+  background-color: #252525;
+  color: #FFFFFF;
+}
+
 .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,6 +470,9 @@ a.social-icon {
   font-size: 20px;
   line-height: 45px;
   width: 45px;
+}
+a.social-icon:visited {
+  color: #FFFFFF;
 }
 
 .page-title {
@@ -618,6 +631,20 @@ a.quick-link:hover .quick-link-icon svg {
 }
 .brand-assessment-form .ba-intro {
   margin: 0 0 15px 0;
+}
+
+.affiliate-logos .flexxed {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.affiliate-logos .affiliate-block {
+  width: 45%;
 }
 
 a.dark-mask img {
@@ -1222,6 +1249,7 @@ a.menu-toggle::before {
 }
 
 .boast-block h2 {
+  color: #FFFFFF;
   font-size: 22px;
   line-height: 1.25em;
   margin: 0 0 30px 0 !important;
@@ -1321,6 +1349,7 @@ a.white-brdr:hover {
 }
 
 .home-main-content img {
+  display: block;
   width: 100%;
 }
 
@@ -1385,8 +1414,9 @@ a.white-brdr:hover {
 }
 
 .company-video h2 {
-  font-size: 2em;
-  font-weight: 500;
+  color: #FFFFFF;
+  font-size: 27px;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -1415,12 +1445,17 @@ a.white-brdr:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  margin: 0 0 15px 0;
+  margin: 0 0 25px 0;
 }
 
 .callout-item h4 {
+  font-size: 15px;
+  margin: 0;
   text-transform: uppercase;
-  font-size: 13px;
+}
+
+.callout-text span {
+  font-size: 14px;
 }
 
 .callout-icon {
@@ -2284,6 +2319,11 @@ object {
     font-size: 21px;
   }
 
+  .affiliate-logos .affiliate-block {
+    margin: 0 0 10px 0;
+    width: 22%;
+  }
+
   .brand-assessment-form.flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2933,6 +2973,10 @@ object {
 @media only screen and (min-width: 1200px) {
   .client-samples .more-work {
     font-size: 23px;
+  }
+
+  .affiliate-logos .affiliate-block {
+    width: 13.5%;
   }
 
   .page-banner {

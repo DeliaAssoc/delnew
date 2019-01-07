@@ -109,19 +109,17 @@
 		wp_reset_query();
 	?>
 	</ul>
-	<div class="constrain">
-		<a class="more-work" href="/work/">See More Award Winning Work ></a>
-	</div>
+	<a class="more-work" href="/work/">See More Award Winning Work ></a>
 </section>
 <!-- CLIENT SAMPLES -->
 
-<section class="company-video p50" style="background-image: url( '<?php the_field( 'company_video_image' ); ?>' );">
+<section class="company-video p45" style="background-image: url( '<?php the_field( 'company_video_image' ); ?>' );">
 	<div class="constrain">
 		<?php the_field( 'company_video_text' ); ?>
 	</div><!-- .constrain -->
 </section><!-- .company-video -->
 
-<section class="callouts p50">
+<section class="callouts p45">
 	<div class="constrain">
         <h2><?php the_field( 'callouts_title' ); ?></h2>
         <div class="flexxed">
@@ -169,5 +167,23 @@
     </section>
 <?php endif; ?>
 <!-- QUICK LINKS MODULE -->
+
+<!-- AFFILIATES LOGOS -->
+<section class="affiliate-logos p30">
+	<?php if ( have_rows( 'affiliate_logos', 'option' ) ) : ?>
+		<div class="constrain">
+			<div class="flexxed">
+				<?php while ( have_rows( 'affiliate_logos', 'option' ) ) : the_row();
+					$image = get_sub_field( 'affiliate_logo', 'option' );
+				?>
+					<a class="affiliate-block" target="_blank" href="<?php the_sub_field( 'affiliate_url','option' ); ?>">
+						<img class="img-fluid" src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>">
+					</a>
+				<?php endwhile; ?>
+			</div>
+		</div>
+	<?php endif; ?>
+</section>
+<!-- AFFILIATES LOGOS -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

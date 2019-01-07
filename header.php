@@ -49,7 +49,7 @@
 				</div>
 				<div class="header-right">
 					<a class="contact-phone" href="tel:<?php echo get_theme_mod( 'theme_company_phone' ); ?>"><?php echo get_theme_mod( 'theme_company_phone' ); ?></a>
-					<div class="header-cta <?php the_field( 'header_call_to_action_bg_color', 'options' ); ?>">
+					<div class="header-cta" style="background-color:<?php the_field( 'header_call_to_action_bg_color', 'options' ); ?>;">
 						<a href="<?php the_field( 'header_call_to_action_link', 'options' ); ?>"><?php the_field( 'header_call_to_action_text', 'options' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 					</div>
 					<a class="menu-toggle" href="#"></a>
