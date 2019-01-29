@@ -65,7 +65,7 @@
 			}
 
 			// Add active class to selected tab-content from tab-link a
-			$( '.tab-content' ).find( '#' + $clicked ).addClass( 'active' ).fadeIn();
+			$( '#' + $clicked ).addClass( 'active' ).fadeIn();
 		}
 	);
 
@@ -137,6 +137,17 @@
 		autoplaySpeed: 5000
 	});
 
+	// Init Slider on BLS Page
+	$('.bls-slider .slider-wrapper').slick({
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		infinite: true,
+		speed: 750,
+		fade: true,
+		cssEase: 'linear'
+	});
+
 	
 	$hmSlides = $( '.home-slider' ).find( '.slide' );
 
@@ -166,6 +177,7 @@
 		$i++;
 	});
 
+	
 
 
 
@@ -189,41 +201,39 @@
 
 
 
-
-
 	// TABBED CONTENT ON WHAT WE DO TEMPLATE PAGES
 
 	// Display first target and content block as default page load
-	$( '.boast-selector-target:first-of-type' ).addClass( 'active' );
-	$( '.boast-content:first-of-type' ).addClass( 'active' );
+	// $( '.boast-selector-target:first-of-type' ).addClass( 'active' );
+	// $( '.boast-content:first-of-type' ).addClass( 'active' );
 
-	$( '.boast-selectors .boast-selector-target' ).on( 'click', function( e ){
+	// $( '.boast-selectors .boast-selector-target' ).on( 'click', function( e ){
 
-		e.preventDefault();
+	// 	e.preventDefault();
 
-		$allTargets = $( '.boast-selectors .boast-selector-target' ),
-		$allContent = $( '.boasts-content .boast-content' ),
-		$hitTarget = $( this ),
-		$currSelected = $hitTarget.data( 'ref' ),
-		$selContent = $('#' + $currSelected );
+	// 	$allTargets = $( '.boast-selectors .boast-selector-target' ),
+	// 	$allContent = $( '.boasts-content .boast-content' ),
+	// 	$hitTarget = $( this ),
+	// 	$currSelected = $hitTarget.data( 'ref' ),
+	// 	$selContent = $('#' + $currSelected );
 
-		if ( !$hitTarget.hasClass( '.active' ) ) {
+	// 	if ( !$hitTarget.hasClass( '.active' ) ) {
 
-			$allTargets.removeClass( 'active' );
-			$hitTarget.addClass( 'active' );
-		}
+	// 		$allTargets.removeClass( 'active' );
+	// 		$hitTarget.addClass( 'active' );
+	// 	}
 
-		if ( !$selContent.hasClass( 'active' ) ) {
+	// 	if ( !$selContent.hasClass( 'active' ) ) {
 
-			// Remove active from all blocks
-			$allContent.removeClass( 'active' );
+	// 		// Remove active from all blocks
+	// 		$allContent.removeClass( 'active' );
 
-			// Add active to selected block
-			$selContent.addClass( 'active' );
+	// 		// Add active to selected block
+	// 		$selContent.addClass( 'active' );
 
-		}
+	// 	}
 
-	});
+	// });
 
 
 

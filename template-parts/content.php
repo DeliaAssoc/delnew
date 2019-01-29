@@ -9,53 +9,23 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="constrain">
-		<header class="entry-header">
-			<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
+<!-- article -->
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-block' ); ?>>
 
-			if ( 'post' === get_post_type() ) :
-				?>
-				<div class="entry-meta">
-					<?php
-					del_posted_on();
-					del_posted_by();
-					?>
-				</div><!-- .entry-meta -->
-			<?php endif; ?>
-		</header><!-- .entry-header -->
+	<a class="post-image" title="<?php the_title(); ?>" href ="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 
-		<?php del_post_thumbnail(); ?>
+	<div class="post-wrapper">
+		<a title="<?php the_title(); ?>" href ="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 
-		<div class="entry-content">
-			<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'del' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+		<div class="blog-post-meta">
+			<?php the_date(); ?> | 
+			<?php the_author(); ?>
+		</div>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'del' ),
-				'after'  => '</div>',
-			) );
-			?>
-		</div><!-- .entry-content -->
+		<div class="blog-snippet"><?php the_excerpt(); ?></div>
 
-		<footer class="entry-footer">
-			<?php del_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		<a href="<?php the_permalink(); ?>" class="view-article">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 	</div>
-</article><!-- #post-<?php the_ID(); ?> -->
+
+</article>
+<!-- /article -->

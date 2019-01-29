@@ -196,16 +196,6 @@ show_admin_bar(false);
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Site Options',
-		'menu_title'	=> 'Site Options',
-		'menu_slug' 	=> 'modules-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-star-filled',
-		'position'		=> 5
-	));
-
-	acf_add_options_page(array(
 		'page_title' 	=> 'Portfolio Page Options',
 		'menu_title'	=> 'Portfolio Page Options',
 		'menu_slug' 	=> 'portfolio-settings',
@@ -234,3 +224,28 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
 }
+
+// PAGINATION FUNCTION
+function blog_pagination()
+{
+    global $wp_query;
+    $big = 999999999;
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages
+    ));
+}
+
+// EDIT EXCERPT LENGTH
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// ALTER ELLIPSIS
+function excerpt_ellipsis($more) {
+    return ' . . .';
+}
+add_filter( 'excerpt_more', 'excerpt_ellipsis' );

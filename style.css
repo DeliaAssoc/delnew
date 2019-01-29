@@ -575,12 +575,20 @@ a.quick-link:hover .quick-link-icon svg {
   background-color: #eceff1;
 }
 
+.about-tabs {
+  background-color: #eceff1;
+}
+
+.about-tabs-intro {
+  padding: 0 0 15px 0;
+}
+
 .tab-links a.link {
   background-color: #898989;
   background-image: url("http://localhost/delianew/wp-content/themes/del/img/white_hourglass.png");
   background-position: right center;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 35%;
   margin: 0 0 15px 0;
   padding: 40px 20px 20px;
   text-transform: uppercase;
@@ -649,6 +657,66 @@ a.quick-link:hover .quick-link-icon svg {
 
 a.dark-mask img {
   display: block;
+}
+
+.blog-samples h2 {
+  text-align: center;
+}
+
+.blog-subtitle {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.sample-post {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+.sample-post .meta-title {
+  color: #939598;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 0 5px;
+  text-transform: uppercase;
+}
+.sample-post img {
+  margin: 0 0 10px;
+}
+.sample-post h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25em;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+.sample-post h3::after {
+  border-bottom: 4px solid #b00c2a;
+  bottom: -9px;
+  content: '';
+  display: block;
+  position: relative;
+  width: 33%;
+}
+
+.pagination {
+  font-size: 15px;
+  border-top: 1px solid #000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.pagination span.page-numbers {
+  background: #a1a1a1;
+}
+
+.pagination a.page-numbers {
+  background: #000;
+  color: #eee;
+}
+
+.pagination .page-numbers {
+  padding: .5em .75em;
+  display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -988,28 +1056,6 @@ a:hover, a:active {
   content: "\e907";
   color: #FFFFFF;
   font-size: 40px;
-}
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
 }
 
 .site-header {
@@ -1916,6 +1962,152 @@ h3.boast-selector-title {
   justify-content: space-between;
 }
 
+.post-block {
+  box-shadow: 0px 15px 45px -9px rgba(0, 0, 0, 0.2);
+  margin: 0 15px 45px !important;
+}
+
+.post-wrapper {
+  padding: 20px;
+}
+.post-wrapper h3 {
+  font-size: 23px;
+}
+
+.blog-post-meta {
+  font-size: 12px;
+}
+
+.view-article {
+  display: inline-block;
+  clear: both;
+  margin: 1em 0;
+  text-decoration: none;
+  padding: .75em .5em;
+  width: auto;
+  background: #c41230;
+}
+
+a.view-article {
+  color: #FFFFFF;
+}
+
+ul.recent-posts-da {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.view-article span {
+  vertical-align: middle;
+}
+
+.recent-posts-da li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.recent-posts-da > li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 0 0 15px;
+  padding: 0 0 10px;
+}
+
+.recent-posts-da .rp-image {
+  width: 30%;
+}
+
+.recent-posts-da .rp-content {
+  font-size: 15px;
+  text-align: left;
+  width: 65%;
+}
+
+.recent-posts-da .rp-meta {
+  font-size: 12px;
+  margin: 0 0 7px;
+}
+
+.recent-posts-da .rp-meta a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.recent-posts-da .rp-title a {
+  color: #af0b2a;
+}
+
+.post-featured-image {
+  margin: 0 0 25px 0;
+}
+
+.nav-links {
+  background-color: #eceff1;
+  font-weight: 600;
+  padding: 10px;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+.nav-links .nav-previous,
+.nav-links .nav-next {
+  position: relative;
+}
+.nav-links .nav-previous {
+  margin: 0 0 15px;
+  padding: 0 0 0 15px;
+  text-align: left;
+}
+.nav-links .nav-previous::before {
+  color: #af0b2a;
+  content: '\f053';
+  font-family: "fontAwesome", sans-serif;
+  left: 0;
+  position: absolute;
+}
+.nav-links .nav-next {
+  padding: 0 15px 0 0;
+  text-align: right;
+}
+.nav-links .nav-next::before {
+  color: #af0b2a;
+  content: '\f054';
+  font-family: "fontAwesome", sans-serif;
+  position: absolute;
+  right: 0;
+}
+
+.blog-sidebar .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.blog-sidebar .search-form > label {
+  width: 65%;
+}
+.blog-sidebar .search-form > label input {
+  border: 1px solid;
+  width: 100%;
+}
+.blog-sidebar .search-form > input[type=submit] {
+  background-color: #231f20;
+  color: #FFFFFF;
+  width: 32%;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -2136,6 +2328,22 @@ object {
   .resources-item.video iframe {
     height: 303px;
   }
+
+  .single-post .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .single-post .post {
+    width: 63%;
+  }
+  .single-post .blog-sidebar {
+    width: 31%;
+  }
 }
 @media only screen and (min-width: 640px) {
   .site-header {
@@ -2196,6 +2404,22 @@ object {
 
   .team-block {
     width: 48.5%;
+  }
+
+  .blog-posts.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .post-block {
+    width: 45%;
   }
 
   .top-footer .menu {
@@ -2274,13 +2498,13 @@ object {
     position: relative;
   }
   .tab-links a.link.count-3 {
-    width: 31%;
+    width: 30%;
   }
   .tab-links a.link.count-4 {
-    width: 24%;
+    width: 22%;
   }
   .tab-links a.link.count-5 {
-    width: 19%;
+    width: 17%;
   }
   .tab-links a.link::after {
     content: '';
@@ -2306,7 +2530,7 @@ object {
     border-width: 25px 25px 0 25px;
     border-color: #af0b2a transparent transparent transparent;
     bottom: -25px;
-    left: 40%;
+    left: 39%;
     position: absolute;
     -webkit-transition: all 0.15s ease-in-out;
     -moz-transition: all 0.15s ease-in-out;
@@ -2317,6 +2541,20 @@ object {
 
   .client-samples .more-work {
     font-size: 21px;
+  }
+
+  .blog-samples .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .sample-post {
+    width: 30%;
   }
 
   .affiliate-logos .affiliate-block {
@@ -2672,6 +2910,10 @@ object {
     width: 50%;
   }
 
+  .nav-links {
+    margin: 30px 0;
+  }
+
   .top-footer.p30 {
     padding: 20px 0 10px 0;
   }
@@ -2947,6 +3189,48 @@ object {
 
   .boast-content .boast-text-content {
     width: 72%;
+  }
+
+  .blog-wrapper.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .blog-posts {
+    width: 67.5%;
+  }
+
+  .blog-sidebar {
+    width: 27.5%;
+  }
+
+  .single-post .post {
+    width: 67.5%;
+  }
+  .single-post .blog-sidebar {
+    width: 27.5%;
+  }
+
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .nav-links .nav-previous,
+  .nav-links .nav-next {
+    width: 45%;
   }
 }
 @media only screen and (min-width: 1100px) {

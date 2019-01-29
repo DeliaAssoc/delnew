@@ -14,8 +14,8 @@ get_header();
 		<main id="main" class="site-main">
 
         <!-- Check for Page Banner -->
-        <?php if ( get_field( 'tp_page_banner_top', 'options' ) ) : ?>
-            <div class="page-banner" style="background-image:url('<?php the_field( 'tp_page_banner_top', 'options' ); ?>');"></div>
+        <?php if ( get_field( 'tp_page_banner', 'options' ) ) : ?>
+            <div class="page-banner" style="background-image:url('<?php the_field( 'tp_page_banner', 'options' ); ?>');"></div>
         <?php endif; ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class( 'p45' ); ?>>

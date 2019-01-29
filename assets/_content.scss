@@ -922,6 +922,166 @@ h3.boast-selector-title {
 	}
 }
 
+// BLOG PAGE
+.post-block {
+	box-shadow: 0px 15px 45px -9px rgba(0,0,0,.2);
+    margin: 0 15px 45px !important;
+}
+
+.post-wrapper {
+	padding: 20px;
+	
+	h3 {
+		font-size: 23px;
+	}
+}
+
+.blog-post-meta {
+	font-size: 12px;
+}
+
+.view-article {
+	display: inline-block;
+    clear: both;
+    margin: 1em 0;
+    text-decoration: none;
+    padding: .75em .5em;
+    width: auto;
+    background: #c41230;
+}
+
+a.view-article {
+	color: $lightest;
+}
+
+ul.recent-posts-da {
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.view-article span {
+    vertical-align: middle;
+}
+
+.recent-posts-da li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.recent-posts-da>li {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+}
+
+.recent-posts-da .rp-image {
+    width: 30%;
+}
+
+.recent-posts-da .rp-content {
+    font-size: 15px;
+    text-align: left;
+    width: 65%;
+}
+
+.recent-posts-da .rp-meta {
+    font-size: 12px;
+    margin: 0 0 7px;
+}
+
+.recent-posts-da .rp-meta a {
+    color: rgba(0,0,0,.5);
+}
+
+.recent-posts-da .rp-title a {
+	color: $accent;
+}
+
+// SINGLE BLOG PAGE
+.post-featured-image {
+	margin: 0 0 25px 0;
+}
+
+.nav-links {
+	background-color: $ltgray;
+	font-weight: 600;
+	padding: 10px;
+	margin: 15px 0;
+	text-transform: uppercase;
+
+	.nav-previous,
+	.nav-next {
+		position: relative;
+	}
+
+	.nav-previous {
+		margin: 0 0 15px;
+		padding: 0 0 0 15px;
+		text-align: left;
+
+		&::before {
+			color: $accent;
+			content: '\f053';
+			font-family: $fa;
+			left: 0;
+			position: absolute;
+		}
+	}
+	
+	.nav-next {
+		padding: 0 15px 0 0;
+		text-align: right;
+
+		&::before {
+			color: $accent;
+			content: '\f054';
+			font-family: $fa;
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+.blog-sidebar {
+
+	.search-form {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		        justify-content: space-between;
+
+		> label {
+			width: 65%;
+
+			input {
+				border: 1px solid;
+				width: 100%;
+			}
+		}
+
+		> input[type=submit] {
+			background-color: $darkest;
+			color: $lightest;
+			width: 32%;
+		}
+	}
+}
+
 
 /*--------------------------------------------------------------
 ## Comments

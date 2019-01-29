@@ -141,6 +141,34 @@
 	</div><!-- .constrain -->
 </section><!-- .callouts -->
 
+<!-- BLOG SAMPLES MODULE -->
+<section class="blog-samples p45">
+	<div class="constrain md">
+		<h2>News & Blog</h2>
+		<div class="blog-subtitle">
+			The latest branding insights, news, tools, and resources from Delia Associates.
+		</div>
+		<div class="flexxed">
+			<?php
+				$sBlogs = new WP_Query( array( 'showposts' => 3, 'orderby' => 'date' ) );
+				
+				while ( $sBlogs->have_posts() ) : $sBlogs->the_post(); ?>
+					
+					<div class="sample-post">
+						<div class="meta-title"><?php echo get_the_date() . ' ' . get_the_time(); ?></div>
+						<?php the_post_thumbnail(); ?>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<div class="sample-text"><?php echo get_the_excerpt(); ?></div>
+						<a href="<?php the_permalink(); ?>" class="view-article">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					</div>
+
+				<?php endwhile;
+				wp_reset_query();
+			?>
+		</div>
+	</div><!-- .contain -->
+</section><!-- .blog-samples -->
+
 <!-- QUICK LINKS MODULE -->
 <?php if ( get_field( 'quick_links', 'options' ) ) : ?>
     <section class="quick-links p45">

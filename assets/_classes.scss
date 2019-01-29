@@ -202,6 +202,15 @@ a.quick-link {
 	background-color: $ltgray;
 }
 
+// About Tabs
+.about-tabs {
+	background-color: $ltgray;
+}
+
+.about-tabs-intro {
+	padding: 0 0 15px 0;
+}
+
 .tab-links {
 
 	a.link {
@@ -209,7 +218,7 @@ a.quick-link {
 		background-image: url( 'http://localhost/delianew/wp-content/themes/del/img/white_hourglass.png' );
 		background-position: right center;
 		background-repeat: no-repeat;
-		background-size: 50%;
+		background-size: 35%;
 		margin: 0 0 15px 0;
 		padding: 40px 20px 20px;
 		text-transform: uppercase;
@@ -302,4 +311,73 @@ a.dark-mask {
 	img {
 		display: block;
 	}
+}
+
+// BLOG SAMPLES
+.blog-samples {
+
+	h2 {
+		text-align: center;
+	}
+}
+
+.blog-subtitle {
+	margin: 0 0 30px 0;
+	text-align: center;
+}
+
+.sample-post {
+    font-size: 16px;
+	margin: 0 0 20px;
+	
+	.meta-title {
+		color: #939598;
+		font-size: 14px;
+		font-weight: 500;
+		padding: 0 0 5px;
+		text-transform: uppercase;
+	}
+
+	img {
+		margin: 0 0 10px;
+	}
+	
+	h3 {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.25em;
+		margin: 0 0 20px;
+		text-transform: uppercase;
+
+		&::after {
+			border-bottom: 4px solid #b00c2a;
+			bottom: -9px;
+			content: '';
+			display: block;
+			position: relative;
+			width: 33%;
+		}
+	}
+}
+
+// PAGINATION
+.pagination {
+	font-size: 15px;
+    border-top: 1px solid #000;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.pagination span.page-numbers {
+    background: #a1a1a1;
+}
+
+.pagination a.page-numbers {
+    background: #000;
+    color: #eee;
+}
+
+.pagination .page-numbers {
+    padding: .5em .75em;
+    display: inline-block;
 }
