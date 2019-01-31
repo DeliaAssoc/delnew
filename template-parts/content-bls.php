@@ -10,11 +10,11 @@
 ?>
 <!-- Check for Page Banner -->
 <?php if ( get_field( 'page_banner_top' ) ) : ?>
-    <div class="page-banner" style="background-image:url('<?php the_field( 'page_banner_top' ); ?>');"></div>
+    <div class="page-banner bls" style="background-image:url('<?php the_field( 'page_banner_top' ); ?>');"></div>
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'p45' ); ?>>
-	<div class="intro-content">
+	<div class="bls-intro-content">
 		<div class="constrain">
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>
@@ -30,7 +30,7 @@
 <!-- PROOF SECTION -->
 <?php
     if ( have_rows( 'sales_proof' ) ) : ?>
-    <section class="proof-blocks">
+    <section class="proof-blocks p45">
         <div class="constrain md">
             <div class="flexxed">
 
@@ -61,7 +61,7 @@
                 $image = get_sub_field( 'slide_image' ); 
             ?>
 
-                <div class="slide" style="background-image: url( '<?php echo $image[ 'url' ]; ?>' );">
+                <div class="slide p45" style="background-image: url( '<?php echo $image[ 'url' ]; ?>' );">
                     <div class="slide-content">
                         <?php the_sub_field( 'slide_content' ); ?>
                     </div>
@@ -74,7 +74,7 @@
 <!-- BLS SLIDER -->
 
 <!-- BLS SECONDARY CONTENT -->
-<section class="power-brand p45">
+<section class="bls-secondary-content p45">
 	<div class="constrain">
 			<?php if ( get_field( 'secondary_content_title' ) ) : ?>
 				<h2 class="page-heading"><?php the_field( 'secondary_content_title' ); ?></h2>

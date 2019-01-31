@@ -104,6 +104,36 @@
         height: 125px;
     }
 
+    // BLS TEMPLATE
+    .bls-slider {
+
+        .slick-initialized .slick-slide {
+            height: 330px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            display: block !important;
+            height: 40px;
+            width: 40px;
+        }
+
+        .slick-prev {
+            left: 10%;
+            z-index: 5;
+        }
+
+        .slick-next {
+            right: 10%;
+        }
+    }
+    
+    .slide-quote {
+        display: block;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+
     // HOME PAGE
     .modal-video iframe {
 		max-height: 300px;
@@ -503,6 +533,31 @@
         margin: 0 0 35px 0;
     }
     
+   // BLS TEMPLATE
+    .page-banner {
+
+        &.bls {
+            height: 250px;
+        }
+    }
+
+   .proof-blocks {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+   }
+
+   .proof-block {
+       width: 32%;
+   }
+
     // CAREER PAGE
     .core-values {
 
@@ -927,6 +982,14 @@
 
 @media only screen and ( min-width: 860px ) {
 
+    // BLS TEMPLATE
+    .page-banner {
+
+        &.bls {
+            height: 275px;
+        }
+    }
+
     // RESOURCES PAGE
     .resources-item {
 
@@ -1043,6 +1106,38 @@
     // ALL PAGE STYLES
     .page-banner {
         height: 175px;
+    }
+
+    // BLS TEMPLATE
+    .page-banner {
+
+        &.bls {
+            height: 335px;
+        }
+    }
+
+    .bls-secondary-content {
+
+        .flexxed {
+            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+
+            img {
+                height: 100%;
+                margin: 0;
+                width: 23%;
+            }
+
+            .secondary-content {
+                width: 73%;
+            }
+        }
     }
 
     // CAREER PAGE
@@ -1192,6 +1287,14 @@
         }
     }
 
+    // BLS TEMPLATE
+    .bls-slider {
+
+        .slick-initialized .slick-slide {
+            height: 400px;
+        }
+    }
+
     // HOME PAGE
     .home-slider .slick-prev,
 	.home-slider .slick-next {
@@ -1322,6 +1425,21 @@
 
 @media only screen and ( min-width: 1100px ) {
 
+    // BLS TEMPLATE
+    .bls-secondary-content {
+
+        .flexxed {
+
+            img {
+                width: 20%;
+            }
+
+            .secondary-content {
+                width: 76%;
+            }
+        }
+    }
+
     // HOME PAGE
     .red-diamond {
 		top: 160px;
@@ -1376,6 +1494,24 @@
         height: 200px;
     }
 
+    // BLS TEMPLATE
+    .page-banner {
+
+        &.bls {
+            height: 420px;
+        }
+    }
+
+    .bls-secondary-content {
+
+        .flexxed {
+
+            .secondary-content {
+                width: 77%;
+            }
+        }
+    }
+
     // HOME PAGE
     .boast-block {
 		padding: 30px 30px 70px;
@@ -1408,7 +1544,22 @@
 }
 
 @media only screen and ( min-width: 1440px ) {
-    
+
+    // BLS TEMPLATE
+    .page-banner {
+
+        &.bls {
+            height: 450px;
+        }
+    }
+
+    .bls-slider {
+
+        img {
+            width: 18.5%;
+        }
+    }
+
     // HOME PAGE
     .home-slider {
 		max-height: 800px;
@@ -1432,6 +1583,21 @@
 }
 
 @media only screen and ( min-width: 1920px ) {
+
+    // BLS TEMPLATE
+    .page-banner {
+
+        &.bls {
+            height: 555px;
+        }
+    }
+
+    .bls-slider {
+
+        .slick-initialized .slick-slide {
+            height: 510px;
+        }
+    }
 
     // HOME PAGE
 	.home-slider .slick-prev,

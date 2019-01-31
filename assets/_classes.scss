@@ -92,6 +92,29 @@ a.red-bg {
 	color: $lightest;
 }
 
+a.callout-btn {
+	background-color: $accent;
+    color: $lightest;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin: 30px auto 0 auto;
+    padding: 5px 25px 5px 10px;
+    position: relative;
+    text-transform: uppercase;
+	
+	&::after {
+		color: #fff;
+		content: '\f105';
+		display: block;
+		font-family: 'FontAwesome',dingbats,Helvetica,sans-serif;
+		position: absolute;
+		top: 5px;
+		right: 10px;
+	}
+}
+
 // SOCIAL MEDIA
 .social-media {
 	display: -webkit-box;
