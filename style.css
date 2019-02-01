@@ -663,6 +663,22 @@ a.quick-link:hover .quick-link-icon svg {
   margin: 0 0 15px 0;
 }
 
+.brand-matters-form {
+  background-color: #231f20;
+  color: #FFFFFF;
+}
+.brand-matters-form h2, .brand-matters-form h3, .brand-matters-form h4 {
+  color: #FFFFFF;
+}
+
+.brand-assessment-form {
+  background-color: #af0b2a;
+  color: #FFFFFF;
+}
+.brand-assessment-form h2, .brand-assessment-form h3, .brand-assessment-form h3 {
+  color: #FFFFFF;
+}
+
 .affiliate-logos .flexxed {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -2673,7 +2689,7 @@ object {
     width: 22%;
   }
 
-  .brand-assessment-form.flexxed {
+  .brand-assessment-form .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -2682,11 +2698,21 @@ object {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .brand-assessment-form .ba-intro {
+  .brand-assessment-form .baf-content {
     width: 32%;
   }
-  .brand-assessment-form .ba-form {
+  .brand-assessment-form .baf-code {
     width: 64%;
+  }
+
+  .brand-matters-form .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .page-banner {

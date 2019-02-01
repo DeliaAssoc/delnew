@@ -168,6 +168,22 @@
 		</div>
 	</div><!-- .contain -->
 </section><!-- .blog-samples -->
+<!-- BLOG SAMPLES MODULE -->
+
+<!-- BRAND ASSESMENT FORM MODULE -->
+<section class="brand-assessment-form p45">
+	<div class="constrain md">
+		<div class="flexxed">
+			<div class="baf-content">
+				<?php the_field( 'brand_assessment_content', 'options' ); ?>
+			</div>
+			<div class="baf-code">
+				<?php the_field( 'brand_assessment_code', 'options' ); ?>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- BRAND ASSESMENT FORM MODULE -->
 
 <!-- QUICK LINKS MODULE -->
 <?php if ( get_field( 'quick_links', 'options' ) ) : ?>
@@ -213,5 +229,24 @@
 	<?php endif; ?>
 </section>
 <!-- AFFILIATES LOGOS -->
+
+<!-- BRAND MATTERS FORM SECTION -->
+<?php if ( get_field( 'brand_matters_form_content', 'options' ) || get_field( 'brand_matters_form_code', 'options' ) ) : ?>
+
+<section class="brand-matters-form p45">
+	<div class="constrain md">
+		<div class="flexxed">
+			<div class="half">
+				<?php the_field( 'brand_matters_form_content', 'options' ); ?>
+			</div>
+			<div class="half">
+				<?php the_field( 'brand_matters_form_code', 'options' ); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php endif; ?>
+<!-- BRAND MATTERS FORM SECTION -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

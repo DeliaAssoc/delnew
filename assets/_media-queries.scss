@@ -505,7 +505,7 @@
     // Brand Assessment Form Module
     .brand-assessment-form {
 
-        &.flexxed {
+        .flexxed {
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
                 -ms-flex-direction: row;
@@ -515,12 +515,26 @@
                     justify-content: space-between;
         }
 
-        .ba-intro {
+        .baf-content {
             width: 32%;
         }
 
-        .ba-form {
+        .baf-code {
             width: 64%;
+        }
+    }
+
+    // Brand Matters Form Module
+    .brand-matters-form {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
     }
 

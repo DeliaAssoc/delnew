@@ -150,3 +150,22 @@
 	</div>
 </section>
 <!-- ABOUT TABS -->
+
+<!-- BRAND MATTERS FORM SECTION -->
+<?php if ( get_field( 'brand_matters_form_content', 'options' ) || get_field( 'brand_matters_form_code', 'options' ) ) : ?>
+
+<section class="brand-matters-form p45">
+	<div class="constrain md">
+		<div class="flexxed">
+			<div class="half">
+				<?php the_field( 'brand_matters_form_content', 'options' ); ?>
+			</div>
+			<div class="half">
+				<?php the_field( 'brand_matters_form_code', 'options' ); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php endif; ?>
+<!-- BRAND MATTERS FORM SECTION -->
