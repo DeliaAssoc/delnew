@@ -45,8 +45,8 @@
 
 
 	// Tabbed Boasts
-	$( '.tab-links a:first-of-type' ).addClass( 'active' );
-	$( '.tab-content-block:first-of-type' ).addClass( 'active' ).css( 'display', 'block' );
+	// $( '.tab-links a:first-of-type' ).addClass( 'active' );
+	// $( '.tab-content-block:first-of-type' ).addClass( 'active' ).css( 'display', 'block' );
 
 	$( '.tab-links a' ).on( 'click', function( e )
 		{

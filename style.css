@@ -473,6 +473,34 @@ a.callout-btn::after {
   right: 10px;
 }
 
+ul.bullets {
+  margin: 10px 0;
+}
+ul.bullets li {
+  padding: 0 0 7px 17px;
+  position: relative;
+}
+ul.bullets li::before {
+  content: '\f111';
+  font-family: "fontAwesome", sans-serif;
+  font-size: 9px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+ul.bullets.red li::before {
+  color: #af0b2a;
+}
+ul.bullets.black li::before {
+  color: #000;
+}
+ul.bullets.white li::before {
+  color: #FFFFFF;
+}
+ul.bullets.gray li::before {
+  color: #898989;
+}
+
 .social-media {
   display: -webkit-box;
   display: -ms-flexbox;

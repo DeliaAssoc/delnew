@@ -115,6 +115,53 @@ a.callout-btn {
 	}
 }
 
+// Bullets
+ul.bullets {
+	margin: 10px 0;
+
+	li {
+		padding: 0 0 7px 17px;
+		position: relative;
+
+		&::before {
+			content: '\f111';
+			font-family: $fa;
+			font-size: 9px;
+			position: absolute;
+			left: 0;
+			top: 4px;
+		}
+	}
+
+	&.red {
+
+		li::before {
+			color: $accent;
+		}
+	}
+
+	&.black {
+
+		li::before {
+			color: #000;
+		}
+	}
+
+	&.white {
+
+		li::before {
+			color: $lightest;
+		}
+	}
+
+	&.gray {
+
+		li::before {
+			color: $dkgray;
+		}
+	}
+}
+
 // SOCIAL MEDIA
 .social-media {
 	display: -webkit-box;

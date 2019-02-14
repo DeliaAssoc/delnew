@@ -100,6 +100,30 @@
 
 <?php endif; ?>
 
+<!-- CLIENT SAMPLES -->
+<section id="client-samples" class="client-samples">
+	<ul class="flexxed">
+	<?php
+		$query = new WP_Query( array( 'post_type' => 'portfolios', 'showposts' => 4, 'orderby' => 'rand' ) );
+			
+		while ( $query->have_posts() ) : $query->the_post(); ?>
+
+			<li class="portfolio">
+
+				<!-- post thumbnail -->
+				<a class="dark-mask" href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+				</a>
+			    <!-- /post thumbnail -->
+			</li>	
+
+		<?php endwhile;
+		wp_reset_query();
+	?>
+	</ul>
+	<a class="more-work" href="/work/">See More Award Winning Work ></a>
+</section>
+<!-- CLIENT SAMPLES -->
 
 <!-- ABOUT TABS -->
 <section class="about-tabs p45">

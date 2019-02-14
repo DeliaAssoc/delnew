@@ -7,6 +7,8 @@
  * @package Delia_Associates
  */
 
+include( get_stylesheet_directory() . '/inc/wyswig_styles.php' );
+
 if ( ! function_exists( 'del_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
